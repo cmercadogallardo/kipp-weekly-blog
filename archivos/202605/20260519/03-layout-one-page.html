@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="es">
+  <head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KIPP Weekly Blog | 03 - Layout: Página Una Sola Pantalla (One-Page)</title><link rel="stylesheet" href="../../../styles.css" /></head>
+  <body>
+    <header class="site-header"><h1>KIPP Weekly Blog</h1>
+      <nav class="main-nav"><ul>
+        <li><a href="../../../index.html">Inicio</a></li>
+        <li><a href="../../../indice-mensual.html">Índice Mensual</a></li>
+        <li><a href="../../index.html">Archivo 202605</a></li>
+      </ul></nav></header>
+    <main><article class="card"><header><h2>03 - Layout: Página Una Sola Pantalla (One-Page)</h2>
+      <p class="meta"><span>📅 Fecha: 20260519</span><span>✍️ Autor: KIPP</span></p>
+      <div class="tags"><span class="tag">Tecnología</span></div></header>
+      <section class="entry-content"><h1 id="layout-página-una-sola-pantalla-one-page">03 - Layout: Página
+Una Sola Pantalla (One-Page)</h1>
+<p><strong>Fecha:</strong> 2026-05-19<br />
+<strong>Investigador:</strong> KIPP - Líder Investigador<br />
+<strong>Objetivo:</strong> Proponer estructura one-page para
+cuanticapyd.com</p>
+<hr />
+<h2 id="concepto-one-page">1. Concepto One-Page</h2>
+<p>Una <strong>one-page</strong> concentra toda la información esencial
+en una sola página con navegación por anclas (scroll). Ideal para:</p>
+<ul>
+<li>✅ Negocios locales con catálogo limitado</li>
+<li>✅ Showrooms físicos que quieren presencia digital</li>
+<li>✅ Conversión directa (contacto/cotización)</li>
+<li>✅ Mobile-first (sin navegación compleja)</li>
+</ul>
+<p><strong>Ventajas para Cuántica:</strong> - Menor mantenimiento que
+sitio multi-página - Flujo de usuario controlado y lineal - Mejor tasa
+de conversión (sin distracciones) - SEO local optimizado en una URL</p>
+<hr />
+<h2 id="estructura-recomendada-orden-de-secciones">2. Estructura
+Recomendada (Orden de Secciones)</h2>
+<pre><code>┌─────────────────────────────────────────┐
+│           1. HEADER (STICKY)            │
+│  Logo | Inicio | Productos | Nosotros  │
+│       | Proyectos | Contacto            │
+└─────────────────────────────────────────┘
+              ↓ (scroll)
+┌─────────────────────────────────────────┐
+│         2. HERO SECTION                 │
+│  - Imagen/Video de fondo impactante     │
+│  - Título principal + Tagline           │
+│  - CTA primario: &quot;Cotizar Proyecto&quot;     │
+│  - CTA secundario: &quot;Ver Catálogo&quot;       │
+└─────────────────────────────────────────┘
+              ↓ (scroll)
+┌─────────────────────────────────────────┐
+│      3. SOBRE NOSOTROS (Breve)          │
+│  - Misión + Visión (resumidas)          │
+│  - 2-3 valores clave                    │
+│  - Foto del equipo/showroom             │
+└─────────────────────────────────────────┘
+              ↓ (scroll)
+┌─────────────────────────────────────────┐
+│     4. PRODUCTOS / CATEGORÍAS           │
+│  - Grid de categorías (6-8 máx)         │
+│  - Fotos representativas                │
+│  - Enlace a ficha/cotización            │
+└─────────────────────────────────────────┘
+              ↓ (scroll)
+┌─────────────────────────────────────────┐
+│       5. PROYECTOS DESTACADOS           │
+│  - 3-6 proyectos con fotos              │
+│  - Nombre del proyecto + ubicación      │
+│  - Productos utilizados                 │
+└─────────────────────────────────────────┘
+              ↓ (scroll)
+┌─────────────────────────────────────────┐
+│         6. MARCAS / ALIANZAS            │
+│  - Logos de marcas (Escorial, etc.)     │
+│  - &quot;Trabajamos con las mejores marcas&quot;  │
+└─────────────────────────────────────────┘
+              ↓ (scroll)
+┌─────────────────────────────────────────┐
+│        7. TESTIMONIOS (Opcional)        │
+│  - 2-3 testimonios de clientes          │
+│  - Foto + nombre + proyecto             │
+└─────────────────────────────────────────┘
+              ↓ (scroll)
+┌─────────────────────────────────────────┐
+│         8. CONTACTO / CTA FINAL         │
+│  - Formulario de cotización             │
+│  - Datos de contacto completos          │
+│  - Mapa de ubicación                    │
+│  - WhatsApp directo                     │
+└─────────────────────────────────────────┘
+              ↓ (scroll)
+┌─────────────────────────────────────────┐
+│              9. FOOTER                  │
+│  - Logo pequeño                         │
+│  - Redes sociales                       │
+│  - Enlaces legales                      │
+│  - © 2026 Cuántica PyD                  │
+└─────────────────────────────────────────┘</code></pre>
+<hr />
+<h2 id="wireframe-conceptual-texto">3. Wireframe Conceptual (Texto)</h2>
+<h3 id="header-sticky---siempre-visible">3.1. HEADER (Sticky - Siempre
+visible)</h3>
+<pre><code>┌────────────────────────────────────────────────────────┐
+│  [LOGO]    Inicio  Productos  Proyectos  Contacto      │
+│                            [📞 555-123-4567] [COTIZAR] │
+└────────────────────────────────────────────────────────┘</code></pre>
+<p><strong>Comportamiento:</strong> - Sticky en scroll (siempre visible)
+- Cambio de color al hacer scroll (transparente → sólido) - Menú
+hamburguesa en móvil - Botón de contacto destacado</p>
+<hr />
+<h3 id="hero-section-pantalla-completa">3.2. HERO SECTION (Pantalla
+completa)</h3>
+<pre><code>┌────────────────────────────────────────────────────────┐
+│                                                        │
+│   [IMAGEN/VIDEO DE FONDO: Espacio arquitectónico      │
+│    impresionante con productos Cuántica]               │
+│                                                        │
+│              GENERAMOS ESPACIOS DE                     │
+│                 VANGUARDIA                             │
+│                                                        │
+│     Con la mayor elegancia y calidad que sus           │
+│            proyectos merecen                           │
+│                                                        │
+│      [COTIZAR MI PROYECTO]    [VER CATÁLOGO]          │
+│                                                        │
+│                    ↓ (scroll)                          │
+└────────────────────────────────────────────────────────┘</code></pre>
+<p><strong>Elementos clave:</strong> - Imagen/video de alta calidad
+(profesional) - Título grande, legible - 2 CTAs: primario (cotizar) +
+secundario (explorar) - Indicador visual de scroll</p>
+<hr />
+<h3 id="sobre-nosotros">3.3. SOBRE NOSOTROS</h3>
+<pre><code>┌────────────────────────────────────────────────────────┐
+│                                                        │
+│  [FOTO EQUIPO/SHOWROOM]     SOBRE NOSOTROS            │
+│                                                        
+│  &quot;Brindamos soluciones óptimas para sus proyectos      
+│   arquitectónicos con diseños y productos innovadores&quot; │
+│                                                        
+│  ✓ Soluciones Inmediatas                               │
+│  ✓ Servicio y Constancia                               │
+│  ✓ Calidad Premium                                     │
+│                                                        
+│                      [CONOCER MÁS →]                   │
+└────────────────────────────────────────────────────────┘</code></pre>
+<p><strong>Layout:</strong> - 2 columnas en desktop (foto + texto) - 1
+columna en móvil (foto arriba) - Iconos para valores - CTA opcional a
+página “Nosotros” si existe</p>
+<hr />
+<h3 id="productos-categorías">3.4. PRODUCTOS / CATEGORÍAS</h3>
+<pre><code>┌────────────────────────────────────────────────────────┐
+│                                                        │
+│                 NUESTROS PRODUCTOS                     │
+│         Acabados de lujo para interior y exterior      │
+│                                                        │
+│  ┌──────────┐  ┌──────────┐  ┌──────────┐             │
+│  │ [FOTO]   │  │ [FOTO]   │  │ [FOTO]   │             │
+│  │ Porcelanato│ │ Alfombra │  │ Duela    │             │
+│  │ Ver →    │  │ Ver →    │  │ Ver →    │             │
+│  └──────────┘  └──────────┘  └──────────┘             │
+│                                                        │
+│  ┌──────────┐  ┌──────────┐  ┌──────────┐             │
+│  │ [FOTO]   │  │ [FOTO]   │  │ [FOTO]   │             │
+│  │ Pisos    │  │ Muros    │  │ Baños    │             │
+│  │ Ver →    │  │ Ver →    │  │ Ver →    │             │
+│  └──────────┘  └──────────┘  └──────────┘             │
+│                                                        │
+│                  [VER CATÁLOGO COMPLETO]               │
+└────────────────────────────────────────────────────────┘</code></pre>
+<p><strong>Layout:</strong> - Grid 3 columnas (desktop) / 1-2 (móvil) -
+Cards con foto, título, CTA - Hover effect en desktop - CTA final a
+catálogo completo (PDF o página dedicada)</p>
+<hr />
+<h3 id="proyectos-destacados">3.5. PROYECTOS DESTACADOS</h3>
+<pre><code>┌────────────────────────────────────────────────────────┐
+│                                                        │
+│                PROYECTOS REALIZADOS                    │
+│           Espacios que hablan por sí mismos            │
+│                                                        │
+│  ┌─────────────────────┐  ┌─────────────────────┐     │
+│  │                     │  │                     │     │
+│  │   [FOTO PROYECTO]   │  │   [FOTO PROYECTO]   │     │
+│  │                     │  │                     │     │
+│  │  Casa Residencial   │  │  Oficina Corporativa│     │
+│  │  San Pedro, NL      │  │  Valle Oriente      │     │
+│  │  Porcelanato + Duela│  │  Alfombra + Muros   │     │
+│  └─────────────────────┘  └─────────────────────┘     │
+│                                                        │
+│  ┌─────────────────────┐                               │
+│  │                     │                               │
+│  │   [FOTO PROYECTO]   │                               │
+│  │                     │                               │
+│  │  Showroom Comercial │                               │
+│  │  Galerías Monterrey │                               │
+│  │  Pisos + Iluminación│                               │
+│  └─────────────────────┘                               │
+│                                                        │
+│                [VER PORTFOLIO COMPLETO]                │
+└────────────────────────────────────────────────────────┘</code></pre>
+<p><strong>Layout:</strong> - Grid asimétrico (2+1 o masonry) - Fotos de
+alta calidad - Información mínima pero relevante - CTA a portfolio
+completo (Instagram, PDF, página)</p>
+<hr />
+<h3 id="marcas-alianzas">3.6. MARCAS / ALIANZAS</h3>
+<pre><code>┌────────────────────────────────────────────────────────┐
+│                                                        │
+│        TRABAJAMOS CON LAS MEJORES MARCAS               │
+│                                                        │
+│   [ESCORIAL]  [PALAPA]  [TERNIUM]  [MARCA4]  [MARCA5] │
+│                                                        │
+│          &quot;Distribuidores autorizados desde 20XX&quot;       │
+│                                                        │
+└────────────────────────────────────────────────────────┘</code></pre>
+<p><strong>Layout:</strong> - Carousel o grid de logos - Logos en escala
+de grises → color en hover - Fila única o dos filas</p>
+<hr />
+<h3 id="testimonios-opcional">3.7. TESTIMONIOS (Opcional)</h3>
+<pre><code>┌────────────────────────────────────────────────────────┐
+│                                                        │
+│          LO QUE DICEN NUESTROS CLIENTES                │
+│                                                        │
+│  ┌─────────────────────────────────────────────────┐  │
+│  │ &quot;★★★★★&quot;                                        │  │
+│  │ &quot;Excelente calidad y atención. El porcelanato   │  │
+│  │  superó nuestras expectativas.&quot;                  │  │
+│  │                                                  │  │
+│  │  — María G., Casa Residencial                   │  │
+│  │     [Foto pequeña]                              │  │
+│  └─────────────────────────────────────────────────┘  │
+│                                                        │
+└────────────────────────────────────────────────────────┘</code></pre>
+<p><strong>Layout:</strong> - 1-3 testimonios máximo - Carrusel si son
+más de 2 - Foto del cliente (opcional pero recomendado)</p>
+<hr />
+<h3 id="contacto-cta-final">3.8. CONTACTO / CTA FINAL</h3>
+<pre><code>┌────────────────────────────────────────────────────────┐
+│                                                        │
+│           ¿LISTO PARA INICIAR TU PROYECTO?             │
+│                                                        │
+│  ┌───────────────────────┐  ┌───────────────────────┐ │
+│  │  FORMULARIO           │  │  INFORMACIÓN          │ │
+│  │                       │  │                       │ │
+│  │  Nombre [________]    │  │  📍 Dirección:        │ │
+│  │  Email [________]     │  │     Av. Ejemplo 123   │ │
+│  │  Teléfono [_______]   │  │     Monterrey, NL     │ │
+│  │  Proyecto [________]  │  │                       │ │
+│  │  Mensaje [________]   │  │  📞 Teléfono:         │ │
+│  │             [____]    │  │     (81) 5555-5555    │ │
+│  │                       │  │                       │ │
+│  │  [ENVIAR COTIZACIÓN]  │  │  📧 Email:            │ │
+│  │                       │  │     info@cuanticapyd  │ │
+│  │                       │  │                       │ │
+│  │                       │  │  💬 WhatsApp:         │ │
+│  │                       │  │     [Chat directo]    │ │
+│  └───────────────────────┘  └───────────────────────┘ │
+│                                                        │
+│              [MAPA DE UBICACIÓN AQUÍ]                  │
+│                                                        │
+└────────────────────────────────────────────────────────┘</code></pre>
+<p><strong>Layout:</strong> - 2 columnas (formulario + info) en desktop
+- 1 columna en móvil (formulario arriba) - Mapa de Google Maps embebido
+- WhatsApp flotante en toda la página</p>
+<hr />
+<h3 id="footer">3.9. FOOTER</h3>
+<pre><code>┌────────────────────────────────────────────────────────┐
+│                                                        │
+│  [LOGO pequeño]                                        │
+│                                                        │
+│  Productos de Diseño para Interior y Exterior          │
+│                                                        │
+│  [FB] [IG] [WA] [LI]    (iconos redes sociales)        │
+│                                                        │
+│  Aviso de Privacidad | Términos y Condiciones          │
+│                                                        │
+│  © 2026 Cuántica Soluciones Arquitectónicas            │
+│  Todos los derechos reservados                         │
+│                                                        │
+└────────────────────────────────────────────────────────┘</code></pre>
+<hr />
+<h2 id="flujo-de-usuario-ideal">4. Flujo de Usuario Ideal</h2>
+<pre><code>ENTRADA (Hero) 
+    ↓
+INTERÉS (Sobre Nosotros + Productos)
+    ↓
+DESEO (Proyectos + Marcas + Testimonios)
+    ↓
+ACCIÓN (Formulario de Contacto)</code></pre>
+<p><strong>Métricas de éxito:</strong> - Tasa de rebote &lt; 40% -
+Tiempo en página &gt; 2 minutos - Conversiones (formularios) &gt; 3% -
+Clics en WhatsApp &gt; 5% de visitantes</p>
+<hr />
+<h2 id="consideraciones-técnicas">5. Consideraciones Técnicas</h2>
+<h3 id="responsive-breakpoints">Responsive Breakpoints</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Dispositivo</th>
+<th>Ancho</th>
+<th>Columnas</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Móvil</td>
+<td>&lt; 768px</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>Tablet</td>
+<td>768-1024px</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>Desktop</td>
+<td>&gt; 1024px</td>
+<td>3-4</td>
+</tr>
+</tbody>
+</table>
+<h3 id="performance">Performance</h3>
+<ul>
+<li><strong>Imágenes:</strong> WebP + lazy loading</li>
+<li><strong>Video Hero:</strong> Máximo 5MB, autoplay muted</li>
+<li><strong>Fuentes:</strong> 2-3 máximo, subset latino</li>
+<li><strong>CSS/JS:</strong> Minificados, critical CSS inline</li>
+</ul>
+<h3 id="seo-on-page">SEO On-Page</h3>
+<ul>
+<li><strong>Title:</strong> “Cuántica PyD | Productos de Diseño
+Arquitectónico en Monterrey”</li>
+<li><strong>Meta Description:</strong> 150-160 caracteres con keywords
+principales</li>
+<li><strong>H1:</strong> Único, en Hero section</li>
+<li><strong>H2:</strong> Uno por sección</li>
+<li><strong>Schema.org:</strong> LocalBusiness + Product</li>
+</ul>
+<hr />
+<p><strong>Firma:</strong> KIPP - Líder Investigador<br />
+<strong>Siguiente paso:</strong> Revisar prompts de desarrollo UI
+(04-prompts-desarrollo-ui.md)</p>
+</section></article></main>
+    <footer class="site-footer"><p>&copy; <span id="current-year"></span> KIPP Weekly Blog</p>
+      <div class="site-footer-links"><a href="../../../indice-mensual.html">Índice Mensual</a></div></footer>
+    <script src="../../../main.js"></script></body></html>
