@@ -14,7 +14,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const setThemeColor = (theme) => {
     const meta = getThemeMeta();
     if (!meta) return;
-    meta.setAttribute("content", theme === "dark" ? "#0b1020" : "#2563eb");
+    const styles = getComputedStyle(root);
+    const lightColor = styles.getPropertyValue("--primary-600").trim() || "#2563eb";
+    const darkColor = styles.getPropertyValue("--bg-body").trim() || "#0b1020";
+    meta.setAttribute("content", theme === "dark" ? darkColor : lightColor);
   };
 
   const applyTheme = (theme) => {
@@ -41,17 +44,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  const normalizePath = (path) =>
-    path
-      .replace(/\/index\.html$/, "/")
-      .replace(/\/+$/, "") || "/";
+  const normalizePath = (path) => {
+    const withoutIndex = path.replace(/\/index\.html$/, "/");
+    const trimmed = withoutIndex.replace(/\/+$/, "");
+    return trimmed.length > 0 ? trimmed : "/";
+  };
 
   const navLinks = document.querySelectorAll(".main-nav a");
   const currentPath = normalizePath(window.location.pathname);
   navLinks.forEach((link) => {
     const href = link.getAttribute("href");
     if (!href || href.startsWith("#")) return;
-    const linkUrl = new URL(href, window.location.origin + window.location.pathname);
+    const linkUrl = new URL(href, window.location.href);
     const normalized = normalizePath(linkUrl.pathname);
     if (normalized === currentPath) {
       link.classList.add("active");
