@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (element.classList.contains("card")) {
         element.style.opacity = "0";
         element.style.transform = "translateY(20px)";
-        element.style.transition = `opacity 0.5s ease ${index * 0.08}s, transform 0.5s ease ${index * 0.08}s`;
+        element.style.transition = `opacity 0.5s ease ${index * 0.1}s, transform 0.5s ease ${index * 0.1}s`;
       }
       observer.observe(element);
     });
