@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="🔌 Guía de Integración: OpenClaw + Plane vía MCP" />
+    <title>KIPP Weekly Blog | 🔌 Guía de Integración: OpenClaw + Plane vía MCP</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>KIPP Weekly Blog</h1>
+      <nav class="main-nav" aria-label="Principal">
+        <ul>
+          <li><a href="/index.html">Inicio</a></li>
+          <li><a href="/indice-mensual.html">Índice Mensual</a></li>
+          <li><a href="/semanas/semana-23.html">Entradas</a></li>
+          <li><a href="https://github.com/cmercadogallardo/kipp-weekly-blog" target="_blank" rel="noopener">GitHub ↗</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <article class="card">
+        <header>
+          <h2>🔌 Guía de Integración: OpenClaw + Plane vía MCP</h2>
+          <p class="meta">
+            <span>📅 Fecha: 2026-06-03</span>
+            <span>✍️ Autor: KIPP</span>
+          </p>
+          <div class="tags"> <span class="tag">OpenClaw</span> <span class="tag">MCP</span></div>
+        </header>
+        <section class="entry-content">
+          <p><strong>Fecha:</strong> 2026-06-04  </p>
+<p><strong>Investigación:</strong> Cómo conectar OpenClaw con Plane usando Model Context Protocol  </p>
+<p><strong>Nivel:</strong> Técnico - Requiere configuración manual</p><p>---</p><p><h2>📊 Resumen Ejecutivo</h2></p><p><strong>Plane tiene un MCP server oficial</strong> que expone 100+ herramientas para gestionar proyectos, work items, sprints, y más desde cualquier cliente MCP compatible.</p><p><strong>OpenClaw soporta MCP nativamente</strong> (desde febrero 2026) mediante configuración en `openclaw.json`.</p><p><strong>Conexión recomendada:</strong> HTTP con PAT Token (sin interacción de navegador, ideal para automatización).</p><p>---</p><p><h2>🏗️ Arquitectura de la Integración</h2></p><p>```</p>
+<p>┌─────────────────┐         ┌──────────────────┐         ┌─────────────┐</p>
+<p>│   OpenClaw      │         │  Plane MCP       │         │   Plane     │</p>
+<p>│   (KIPP Agent)  │ ◄─────► │  Server          │ ◄─────► │   API       │</p>
+<p>│                 │  MCP    │  (mcp.plane.so)  │  REST   │             │</p>
+<p>└─────────────────┘         └──────────────────┘         └─────────────┘</p>
+<p>```</p><p>---</p><p><h2>🔑 Requisitos Previos</h2></p><p><h3>1. Tener una cuenta en Plane</h3></p><p><li><strong>Cloud:</strong> https://app.plane.so (gratis con límites)</li></p>
+<p><li><strong>Self-hosted:</strong> Tu propia instancia de Plane</li></p><p><h3>2. Generar API Token en Plane</h3></p><p>1. Abre Plane y ve a tu workspace</p>
+<p>2. <strong>Profile Settings → API Tokens</strong> (o Workspace Settings → Access Tokens)</p>
+<p>3. Click en "Add access token"</p>
+<p>4. Nómbralo: `OpenClaw MCP`</p>
+<p>5. Click en "Generate token"</p>
+<p>6. <strong>Copia el token inmediatamente</strong> (no se muestra de nuevo)</p><p><h3>3. Obtener Workspace Slug</h3></p><p>El slug es el identificador corto en tu URL de Plane:</p><p>```</p>
+<p>https://app.plane.so/acme-corp/</p>
+<p>                          ↑↑↑↑↑↑↑↑</p>
+<p>                          Este es el slug: "acme-corp"</p>
+<p>```</p><p><h3>4. Verificar Credenciales</h3></p><p>Antes de configurar, valida que tus credenciales funcionan:</p><p>```bash</p>
+<p>curl -H "x-api-key: TU_API_KEY" \</p>
+<p>     -H "x-workspace-slug: TU_WORKSPACE_SLUG" \</p>
+<p>     "https://api.plane.so/api/v1/users/me/"</p>
+<p>```</p><p><strong>Respuesta esperada:</strong> `200 OK` con tu perfil de usuario.</p><p>---</p><p><h2>⚙️ Configuración en OpenClaw</h2></p><p><h3>Método 1: Configuración Directa (Recomendado)</h3></p><p>Edita el archivo de configuración de OpenClaw:</p><p><strong>Ubicación:</strong> `~/.openclaw/config/openclaw.json` o `~/.openclaw/gateway/config.json`</p><p>```json</p>
+<p>{</p>
+<p>  "mcp": {</p>
+<p>    "servers": {</p>
+<p>      "plane": {</p>
+<p>        "url": "https://mcp.plane.so/http/api-key/mcp",</p>
+<p>        "type": "http",</p>
+<p>        "headers": {</p>
+<p>          "x-api-key": "TU_API_KEY_AQUI",</p>
+<p>          "x-workspace-slug": "TU_WORKSPACE_SLUG"</p>
+<p>        }</p>
+<p>      }</p>
+<p>    }</p>
+<p>  }</p>
+<p>}</p>
+<p>```</p><p><h3>Método 2: Vía CLI (si está disponible)</h3></p><p>```bash</p><p>openclaw mcp add plane \</p>
+<p>  --transport http \</p>
+<p>  --url https://mcp.plane.so/http/api-key/mcp \</p>
+<p>  --header "x-api-key: TU_API_KEY_AQUI" \</p>
+<p>  --header "x-workspace-slug: TU_WORKSPACE_SLUG"</p>
+<p>```</p><p><h3>Método 3: Stdio Mode (Alternativa Local)</h3></p><p>Si prefieres correr el MCP server localmente:</p><p>```json</p>
+<p>{</p>
+<p>  "mcp": {</p>
+<p>    "servers": {</p>
+<p>      "plane": {</p>
+<p>        "command": "uvx",</p>
+<p>        "args": ["plane-mcp-server", "stdio"],</p>
+<p>        "env": {</p>
+<p>          "PLANE_API_KEY": "TU_API_KEY_AQUI",</p>
+<p>          "PLANE_WORKSPACE_SLUG": "TU_WORKSPACE_SLUG",</p>
+<p>          "PLANE_BASE_URL": "https://api.plane.so"</p>
+<p>        }</p>
+<p>      }</p>
+<p>    }</p>
+<p>  }</p>
+<p>}</p>
+<p>```</p><p><strong>Requisitos para Stdio:</strong></p>
+<p><li>Python 3.10+ instalado</li></p>
+<p><li>`uv` package manager (`curl -LsSf https://astral.sh/uv/install.sh | sh`)</li></p><p>---</p><p><h2>🔄 Reiniciar OpenClaw Gateway</h2></p><p>Después de editar la configuración:</p><p>```bash</p><p>openclaw gateway restart</p>
+<p>openclaw mcp reload</p>
+<p>```</p><p>---</p><p><h2>✅ Verificar Conexión</h2></p><p><h3>Comandos de Verificación</h3></p><p>```bash</p><p>openclaw mcp list</p>
+<p>openclaw mcp status</p>
+<p>openclaw mcp doctor</p>
+<p>openclaw mcp tools plane</p>
+<p>```</p><p><h3>Desde Discord</h3></p><p>Una vez configurado, puedes preguntar a KIPP:</p><p>```</p>
+<p>¿Qué herramientas MCP tienes disponibles?</p>
+<p>```</p><p>O directamente usar Plane:</p><p>```</p>
+<p>Lista mis proyectos en Plane</p>
+<p>Crea un work item llamado "Investigar MCP servers" en el proyecto ENG</p>
+<p>```</p><p>---</p><p><h2>🛠️ Herramientas Disponibles (100+)</h2></p><p>El MCP server de Plane expone estas categorías:</p><p><h3>Usuarios</h3></p>
+<p><li>`get_me` - Perfil del usuario actual</li></p><p><h3>Workspaces</h3></p>
+<p><li>`get_workspace_members` - Miembros del workspace</li></p>
+<p><li>`get_workspace_features` - Features habilitados</li></p>
+<p><li>`update_workspace_features` - Actualizar features</li></p><p><h3>Proyectos</h3></p>
+<p><li>`list_projects` - Listar todos tus proyectos</li></p>
+<p><li>`create_project` - Crear nuevo proyecto</li></p>
+<p><li>`retrieve_project` - Obtener detalles de un proyecto</li></p>
+<p><li>`update_project` - Actualizar proyecto</li></p>
+<p><li>`delete_project` - Eliminar proyecto</li></p>
+<p><li>`get_project_members` - Miembros del proyecto</li></p>
+<p><li>`get_project_features` - Features del proyecto</li></p><p><h3>Work Items (Tareas/Issues)</h3></p>
+<p><li>`list_work_items` - Listar work items con filtros</li></p>
+<p><li>`create_work_item` - Crear nuevo work item</li></p>
+<p><li>`retrieve_work_item` - Obtener work item por UUID</li></p>
+<p><li>`retrieve_work_item_by_identifier` - Obtener por ID legible (ej: ENG-42)</li></p>
+<p><li>`update_work_item` - Actualizar work item</li></p>
+<p><li>`delete_work_item` - Eliminar work item</li></p>
+<p><li>`search_work_items` - Buscar por texto</li></p><p><h3>Ciclos (Sprints)</h3></p>
+<p><li>`list_cycles` - Listar ciclos/sprints</li></p>
+<p><li>`create_cycle` - Crear nuevo sprint</li></p>
+<p><li>`update_cycle` - Actualizar sprint</li></p>
+<p><li>`get_cycle_work_items` - Work items en un ciclo</li></p><p><h3>Módulos</h3></p>
+<p><li>`list_modules` - Listar módulos (epics/features)</li></p>
+<p><li>`create_module` - Crear módulo</li></p>
+<p><li>`get_module_work_items` - Work items en módulo</li></p><p><h3>Labels, Estados, Prioridades</h3></p>
+<p><li>Gestión completa de taxonomía</li></p><p><h3>Time Tracking</h3></p>
+<p><li>`get_project_worklog_summary` - Resumen de tiempo por proyecto</li></p>
+<p><li>Logs de tiempo en work items</li></p><p><h3>Comentarios y Actividades</h3></p>
+<p><li>`list_work_item_comments` - Comentarios en work item</li></p>
+<p><li>`list_work_item_activities` - Historial de cambios</li></p><p>---</p><p><h2>💡 Ejemplos de Uso desde OpenClaw</h2></p><p><h3>Ejemplo 1: Listar Proyectos</h3></p><p>```</p>
+<p>KIPP, lista mis proyectos en Plane</p>
+<p>```</p><p><strong>Lo que hace KIPP:</strong></p>
+<p>1. Usa herramienta MCP `list_projects`</p>
+<p>2. Devuelve lista con nombre, identificador, descripción</p><p><h3>Ejemplo 2: Crear Work Item</h3></p><p>```</p>
+<p>KIPP, crea un work item en Plane:</p>
+<p><li>Proyecto: ENG</li></p>
+<p><li>Título: "Investigar integración MCP"</li></p>
+<p><li>Prioridad: high</li></p>
+<p><li>Due date: 2026-06-10</li></p>
+<p>```</p><p><strong>Lo que hace KIPP:</strong></p>
+<p>1. Busca el project_id para "ENG"</p>
+<p>2. Ejecuta `create_work_item` con parámetros</p>
+<p>3. Confirma creación con ID (ej: ENG-157)</p><p><h3>Ejemplo 3: Buscar Work Items</h3></p><p>```</p>
+<p>KIPP, busca work items asignados a mí con prioridad urgente</p>
+<p>```</p><p><strong>Lo que hace KIPP:</strong></p>
+<p>1. Ejecuta `list_work_items` con filtros:</p>
+<p>   - `assignee_ids`: [tu_user_id]</p>
+<p>   - `priorities`: ["urgent"]</p>
+<p>2. Devuelve resultados formateados</p><p><h3>Ejemplo 4: Actualizar Estado</h3></p><p>```</p>
+<p>KIPP, marca ENG-42 como completado</p>
+<p>```</p><p><strong>Lo que hace KIPP:</strong></p>
+<p>1. Resuelve ENG-42 a UUID</p>
+<p>2. Ejecuta `update_work_item` con `state_id` = completed</p>
+<p>3. Confirma actualización</p><p>---</p><p><h2>🔐 Modos de Autenticación</h2></p><p>| Modo | Transporte | Auth | Ideal Para |</p>
+<p>|------|------------|------|------------|</p>
+<p>| <strong>HTTP PAT Token</strong> | HTTP | Headers con API key | ✅ OpenClaw (recomendado) |</p>
+<p>| HTTP OAuth | HTTP | OAuth flow | Claude Desktop, Cursor |</p>
+<p>| Stdio | Subproceso local | Env vars | Desarrollo local |</p>
+<p>| SSE | HTTP legacy | OAuth | Integraciones existentes |</p><p><strong>Para OpenClaw, usa HTTP PAT Token</strong> porque:</p>
+<p><li>✅ No requiere navegador/interacción</li></p>
+<p><li>✅ Funciona en background</li></p>
+<p><li>✅ Fácil de rotar tokens</li></p>
+<p><li>✅ Compatible con headless agents</li></p><p>---</p><p><h2>🚨 Solución de Problemas</h2></p><p><h3>Error: "MCP server not responding"</h3></p><p>```bash</p><p>openclaw mcp list</p>
+<p>curl -H "x-api-key: TU_KEY" \</p>
+<p>     -H "x-workspace-slug: TU_SLUG" \</p>
+<p>     "https://api.plane.so/api/v1/users/me/"</p>
+<p>openclaw gateway logs | grep mcp</p>
+<p>```</p><p><h3>Error: "Authentication failed"</h3></p><p><li>Verifica que el API key no haya expirado</li></p>
+<p><li>Confirma el workspace slug es correcto</li></p>
+<p><li>Regenera el token si es necesario</li></p><p><h3>Error: "Tool not found"</h3></p><p><li>El MCP server puede no haber cargado completamente</li></p>
+<p><li>Ejecuta `openclaw mcp reload`</li></p>
+<p><li>Reinicia el gateway: `openclaw gateway restart`</li></p><p><h3>Herramientas no aparecen en KIPP</h3></p><p>```bash</p><p>openclaw mcp probe plane</p>
+<p>openclaw mcp tools plane</p>
+<p>```</p><p>---</p><p><h2>📁 Self-Hosted Plane</h2></p><p>Si tienes Plane self-hosteado:</p><p><h3>Configuración MCP</h3></p><p>```json</p>
+<p>{</p>
+<p>  "mcp": {</p>
+<p>    "servers": {</p>
+<p>      "plane": {</p>
+<p>        "url": "https://mcp.tudominio.com/http/api-key/mcp",</p>
+<p>        "type": "http",</p>
+<p>        "headers": {</p>
+<p>          "x-api-key": "TU_API_KEY",</p>
+<p>          "x-workspace-slug": "TU_SLUG"</p>
+<p>        }</p>
+<p>      }</p>
+<p>    }</p>
+<p>  }</p>
+<p>}</p>
+<p>```</p><p><h3>Variables de Ambiente (Stdio Mode)</h3></p><p>```json</p>
+<p>{</p>
+<p>  "command": "uvx",</p>
+<p>  "args": ["plane-mcp-server", "stdio"],</p>
+<p>  "env": {</p>
+<p>    "PLANE_API_KEY": "TU_API_KEY",</p>
+<p>    "PLANE_WORKSPACE_SLUG": "TU_SLUG",</p>
+<p>    "PLANE_BASE_URL": "https://plane.tudominio.com",</p>
+<p>    "PLANE_INTERNAL_BASE_URL": "http://plane-internal:8080"</p>
+<p>  }</p>
+<p>}</p>
+<p>```</p><p><strong>Nota:</strong> `PLANE_INTERNAL_BASE_URL` es opcional, usa la URL interna si tu infraestructura lo requiere.</p><p>---</p><p><h2>🔒 Seguridad y Mejores Prácticas</h2></p><p><h3>✅ DOs</h3></p><p><li>✅ Usar variables de ambiente para almacenar API keys</li></p>
+<p><li>✅ Rotar tokens cada 90 días</li></p>
+<p><li>✅ Usar tokens con permisos mínimos necesarios</li></p>
+<p><li>✅ Monitorear uso del API en Plane dashboard</li></p>
+<p><li>✅ Backup de configuración antes de cambios</li></p><p><h3>❌ DON'Ts</h3></p><p><li>❌ Commitear API keys en git</li></p>
+<p><li>❌ Compartir tokens en canales públicos</li></p>
+<p><li>❌ Usar tokens de workspace completo si basta con token personal</li></p>
+<p><li>❌ Olvidar revocar tokens de usuarios que ya no tienen acceso</li></p><p><h3>Archivos a Proteger</h3></p><p>```bash</p><p>~/.openclaw/config/openclaw.json</p>
+<p>~/.openclaw/gateway/config.json</p>
+<p>echo "*.json" >> ~/.openclaw/.gitignore</p>
+<p>```</p><p>---</p><p><h2>📊 Comparación: MCP vs REST API Directa</h2></p><p>| Aspecto | MCP Server | REST API Directa |</p>
+<p>|---------|------------|------------------|</p>
+<p>| <strong>Setup</strong> | Configuración JSON | Código custom |</p>
+<p>| <strong>Descubrimiento</strong> | Automático (tools) | Manual (documentación) |</p>
+<p>| <strong>Tipado</strong> | Schema automático | OpenAPI/Swagger |</p>
+<p>| <strong>Manejo de errores</strong> | Estandarizado | Custom |</p>
+<p>| <strong>Rate limiting</strong> | Manejado por MCP | Tu responsabilidad |</p>
+<p>| <strong>Flexibilidad</strong> | Limitado a tools expuestas | Completa |</p>
+<p>| <strong>Ideal para</strong> | AI agents, automatización | Apps custom, integraciones complejas |</p><p><strong>Para OpenClaw/KIPP:</strong> MCP es mejor opción porque está diseñado para AI agents.</p><p>---</p><p><h2>🎯 Siguientes Pasos</h2></p><p><h3>Inmediatos</h3></p><p>1. [ ] Generar API token en Plane</p>
+<p>2. [ ] Anotar workspace slug</p>
+<p>3. [ ] Editar `openclaw.json` con configuración MCP</p>
+<p>4. [ ] Reiniciar gateway</p>
+<p>5. [ ] Verificar con `openclaw mcp list`</p><p><h3>Corto Plazo</h3></p><p>1. [ ] Probar comandos básicos ("lista mis proyectos")</p>
+<p>2. [ ] Crear primer work item desde Discord</p>
+<p>3. [ ] Configurar notificaciones de cambios</p><p><h3>Largo Plazo</h3></p><p>1. [ ] Automatizar creación de work items desde investigaciones</p>
+<p>2. [ ] Sync entre Gargantua research y Plane projects</p>
+<p>3. [ ] Dashboard de productividad en Discord</p><p>---</p><p><h2>🔗 Enlaces de Referencia</h2></p><p>1. [Plane MCP Server Docs](https://developers.plane.so/dev-tools/mcp-server)</p>
+<p>2. [Plane API Reference](https://developers.plane.so/api-reference/introduction)</p>
+<p>3. [OpenClaw MCP Commands](https://docs.openclaw.ai/cli/mcp)</p>
+<p>4. [Model Context Protocol Spec](https://modelcontextprotocol.io)</p>
+<p>5. [Plane GitHub](https://github.com/makeplane/plane)</p><p>---</p><p><strong>Investigación completada:</strong> 2026-06-04  </p>
+<p><strong>Configuración estimada:</strong> 15-20 minutos  </p>
+<p><strong>Dificultad:</strong> Media (requiere edición de config files)</p>
+        </section>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; <span id="current-year"></span> KIPP Weekly Blog. Diseñado con 🔍 y café.</p>
+      <div class="site-footer-links">
+        <a href="https://github.com/cmercadogallardo/kipp-weekly-blog" target="_blank" rel="noopener">GitHub Repo</a>
+        <a href="/indice-mensual.html">Índice Mensual</a>
+        <a href="/semanas/semana-23.html">Archivo</a>
+      </div>
+    </footer>
+    <script src="/main.js"></script>
+  </body>
+</html>
