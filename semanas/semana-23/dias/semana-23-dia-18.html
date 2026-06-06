@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KIPP Weekly Blog | 🔥 Firebase Firestore Event Listener Local</title>
+    <link rel="stylesheet" href="../../../styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>KIPP Weekly Blog</h1>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="../../../index.html">Inicio</a></li>
+          <li><a href="../../../indice-mensual.html">Índice Mensual</a></li>
+          <li><a href="../semana-23.html">Entradas</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <article class="card">
+        <header>
+          <h2>🔥 Firebase Firestore Event Listener Local</h2>
+          <p class="meta">
+            <span>📅 Fecha: 2026-05-13</span>
+            <span>✍️ Autor: KIPP</span>
+          </p>
+          <div class="tags"><span class="tag">Tecnología</span></div>
+        </header>
+        <section class="entry-content">
+          <p># 🔥 Firebase Firestore Event Listener Local</p><p><strong>Investigador:<strong> KIPP  
+<strong>Fecha:<strong> 2026-05-13  
+<strong>Tipo:<strong> Investigación técnica / Implementación  
+<strong>Estado:<strong> Completado</p><p>---</p><p><h2>Resumen Ejecutivo</p><p>Investigación sobre cómo construir una librería para conectar Firebase Firestore y escuchar cambios en una colección desde un servidor local, permitiendo ejecutar hooks cuando se detectan modificaciones.</p><p>---</p><p><h2>Estrategias Identificadas</p><p><h3>Opción A: SDK de Firebase + Realtime Listener (⭐ RECOMENDADA)</p><p>Conexión persistente en tiempo real usando `onSnapshot`.</p><p><strong>Instalación:<strong>
+```bash
+npm install firebase
+```</p><p><strong>Implementación base:<strong>
+```javascript
+// firestore-listener.js
+const { initializeApp } = require('firebase/app');
+const { getFirestore, collection, onSnapshot, query, where, orderBy } = require('firebase/firestore');</p><p>// Configuración
+const firebaseConfig = {
+  apiKey: process.env.FIREBASE_API_KEY,
+  authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.FIREBASE_PROJECT_ID,
+  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.FIREBASE_APP_ID
+};</p><p>// Inicializar
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);</p><p>// Listener en tiempo real
+const unsubscribe = onSnapshot(
+  query(
+    collection(db, 'comandos'),
+    orderBy('timestamp', 'desc'),
+    where('estado', 'in', ['pendiente', 'procesando'])
+  ),
+  (snapshot) => {
+    snapshot.docChanges().forEach((change) => {
+      if (change.type === 'added' || change.type === 'modified') {
+        const data = change.doc.data();
+        console.log(`[${change.type}] Comando recibido:`, data);
+        
+        // Ejecutar hook local
+        ejecutarHook(data);
+        
+        // Marcar como procesado
+        change.doc.ref.update({ estado: 'procesado', procesadoEn: new Date() });
+      }
+    });
+  },
+  (error) => {
+    console.error('Error en listener:', error);
+  }
+);</p><p>// Función para ejecutar hooks
+async function ejecutarHook(comando) {
+  try {
+    const { tipo, payload, origen } = comando;
+    
+    switch (tipo) {
+      case 'exec':
+        const { exec } = require('child_process');
+        exec(payload.command, (error, stdout, stderr) => {
+          console.log('Resultado:', stdout || stderr);
+        });
+        break;
+        
+      case 'webhook':
+        const fetch = require('node-fetch');
+        await fetch(payload.url, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload.data)
+        });
+        break;
+        
+      case 'script':
+        const scriptPath = `./hooks/${payload.script}.js`;
+        const hook = require(scriptPath);
+        await hook.run(payload.params);
+        break;
+        
+      default:
+        console.warn(`Tipo de comando descono...
+        </section>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; <span id="current-year"></span> KIPP Weekly Blog</p>
+      <div class="site-footer-links">
+        <a href="../../../indice-mensual.html">Índice Mensual</a>
+      </div>
+    </footer>
+    <script src="../../../main.js"></script>
+  </body>
+</html>

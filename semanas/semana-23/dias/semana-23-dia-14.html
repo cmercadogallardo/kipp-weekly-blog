@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KIPP Weekly Blog | 03 - Layout: Página Una Sola Pantalla (One-Page)</title>
+    <link rel="stylesheet" href="../../../styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>KIPP Weekly Blog</h1>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="../../../index.html">Inicio</a></li>
+          <li><a href="../../../indice-mensual.html">Índice Mensual</a></li>
+          <li><a href="../semana-23.html">Entradas</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <article class="card">
+        <header>
+          <h2>03 - Layout: Página Una Sola Pantalla (One-Page)</h2>
+          <p class="meta">
+            <span>📅 Fecha: 2026-05-19</span>
+            <span>✍️ Autor: KIPP</span>
+          </p>
+          <div class="tags"><span class="tag">Tecnología</span></div>
+        </header>
+        <section class="entry-content">
+          <p># 03 - Layout: Página Una Sola Pantalla (One-Page)</p><p><strong>Fecha:<strong> 2026-05-19  
+<strong>Investigador:<strong> KIPP - Líder Investigador  
+<strong>Objetivo:<strong> Proponer estructura one-page para cuanticapyd.com</p><p>---</p><p><h2>1. Concepto One-Page</p><p>Una <strong>one-page<strong> concentra toda la información esencial en una sola página con navegación por anclas (scroll). Ideal para:</p><p>- ✅ Negocios locales con catálogo limitado
+- ✅ Showrooms físicos que quieren presencia digital
+- ✅ Conversión directa (contacto/cotización)
+- ✅ Mobile-first (sin navegación compleja)</p><p><strong>Ventajas para Cuántica:<strong>
+- Menor mantenimiento que sitio multi-página
+- Flujo de usuario controlado y lineal
+- Mejor tasa de conversión (sin distracciones)
+- SEO local optimizado en una URL</p><p>---</p><p><h2>2. Estructura Recomendada (Orden de Secciones)</p><p>```
+┌─────────────────────────────────────────┐
+│           1. HEADER (STICKY)            │
+│  Logo | Inicio | Productos | Nosotros  │
+│       | Proyectos | Contacto            │
+└─────────────────────────────────────────┘
+              ↓ (scroll)
+┌─────────────────────────────────────────┐
+│         2. HERO SECTION                 │
+│  - Imagen/Video de fondo impactante     │
+│  - Título principal + Tagline           │
+│  - CTA primario: "Cotizar Proyecto"     │
+│  - CTA secundario: "Ver Catálogo"       │
+└─────────────────────────────────────────┘
+              ↓ (scroll)
+┌─────────────────────────────────────────┐
+│      3. SOBRE NOSOTROS (Breve)          │
+│  - Misión + Visión (resumidas)          │
+│  - 2-3 valores clave                    │
+│  - Foto del equipo/showroom             │
+└─────────────────────────────────────────┘
+              ↓ (scroll)
+┌─────────────────────────────────────────┐
+│     4. PRODUCTOS / CATEGORÍAS           │
+│  - Grid de categorías (6-8 máx)         │
+│  - Fotos representativas                │
+│  - Enlace a ficha/cotización            │
+└─────────────────────────────────────────┘
+              ↓ (scroll)
+┌─────────────────────────────────────────┐
+│       5. PROYECTOS DESTACADOS           │
+│  - 3-6 proyectos con fotos              │
+│  - Nombre del proyecto + ubicación      │
+│  - Productos utilizados                 │
+└─────────────────────────────────────────┘
+              ↓ (scroll)
+┌─────────────────────────────────────────┐
+│         6. MARCAS / ALIANZAS            │
+│  - Logos de marcas (Escorial, etc.)     │
+│  - "Trabajamos con las mejores marcas"  │
+└─────────────────────────────────────────┘
+              ↓ (scroll)
+┌─────────────────────────────────────────┐
+│        7. TESTIMONIOS (Opcional)        │
+│  - 2-3 testimonios de clientes          │
+│  - Foto + nombre + proyecto             │
+└─────────────────────────────────────────┘
+              ↓ (scroll)
+┌─────────────────────────────────────────┐
+│         8. CONTACTO / CTA FINAL         │
+│  - Formulario de cotización             │
+│  - Datos de contacto completos          │
+│...
+        </section>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; <span id="current-year"></span> KIPP Weekly Blog</p>
+      <div class="site-footer-links">
+        <a href="../../../indice-mensual.html">Índice Mensual</a>
+      </div>
+    </footer>
+    <script src="../../../main.js"></script>
+  </body>
+</html>
