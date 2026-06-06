@@ -11,7 +11,7 @@
     <title>KIPP Weekly Blog | Inicio</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body id="top">
+  <body id="top" data-nav-section="home">
     <a class="skip-link" href="#contenido-principal">Saltar al contenido</a>
     <header class="site-header">
       <div class="header-container">
@@ -22,12 +22,11 @@
           </h1>
         </a>
 
-        <nav class="main-nav" aria-label="Navegacion principal">
+        <nav class="main-nav" aria-label="Navegacion principal del blog">
           <ul>
-            <li><a href="index.html" class="active">Portada</a></li>
-            <li><a href="#briefing-destacado">Destacado</a></li>
-            <li><a href="#ultimos-briefings">Ultimos briefings</a></li>
-            <li><a href="indice-mensual.html">Archivo</a></li>
+            <li><a href="index.html" data-nav-section="home">Portada</a></li>
+            <li><a href="indice-mensual.html" data-nav-section="archive">Indice por meses</a></li>
+            <li><a href="briefings.html" data-nav-section="briefings">Briefings</a></li>
           </ul>
         </nav>
 
@@ -52,51 +51,53 @@
         <div class="hero-container hero-grid">
           <div class="hero-copy">
             <div class="hero-badge">
-              <span>Edicion semanal</span>
+              <span>Blog-first</span>
               <span class="hero-badge-dot" aria-hidden="true"></span>
               <span>Junio 2026</span>
             </div>
 
-            <h2>Portada editorial para seguir tecnologia, AI y automatizacion sin ruido.</h2>
+            <h2>La portada del blog pone primero lo nuevo, lo relevante y el acceso al archivo.</h2>
 
             <p>
-              Briefings curados, contexto accionable y un archivo navegable para revisar lo mas
-              relevante de cada semana desde una sola vista.
+              KIPP se entiende ahora como blog: una portada para arrancar por la edicion mas
+              reciente, un indice por meses para navegar historial y una vista de briefings para
+              escanear todo como feed premium.
             </p>
 
             <div class="hero-cta">
-              <a href="#briefing-destacado" class="btn btn-primary">Leer briefing destacado</a>
-              <a href="indice-mensual.html" class="btn btn-secondary">Abrir archivo completo</a>
+              <a href="archivos/202605/20260519/tech-briefing-20260519.html" class="btn btn-primary">Leer lo ultimo</a>
+              <a href="briefings.html" class="btn btn-secondary">Ver todos los briefings</a>
             </div>
 
             <nav class="hero-nav" aria-label="Accesos rapidos de portada">
-              <a href="#ultimos-briefings">Feed</a>
-              <a href="#temas">Temas</a>
-              <a href="#archivo">Archivo</a>
+              <a href="index.html">Portada</a>
+              <a href="indice-mensual.html">Indice por meses</a>
+              <a href="briefings.html">Briefings</a>
             </nav>
           </div>
 
           <aside class="hero-panel" aria-label="Resumen de la edicion">
             <div class="hero-panel-header">
-              <span class="eyebrow">Pulse editorial</span>
-              <strong>Semana 23</strong>
+              <span class="eyebrow">Mapa del blog</span>
+              <strong>3 rutas claras</strong>
             </div>
             <dl class="hero-stats">
               <div>
-                <dt>Briefings publicados</dt>
-                <dd>2</dd>
+                <dt>Portada</dt>
+                <dd>Lo mas nuevo y relevante</dd>
               </div>
               <div>
-                <dt>Temas activos</dt>
-                <dd>AI, robotics, mobile</dd>
+                <dt>Indice por meses</dt>
+                <dd>Archivo por fecha</dd>
               </div>
               <div>
-                <dt>Ultima publicacion</dt>
-                <dd>2026-05-19</dd>
+                <dt>Briefings</dt>
+                <dd>Feed premium</dd>
               </div>
             </dl>
             <p class="hero-panel-note">
-              La lectura recomendada hoy cruza simulacion, robots autonomos y eficiencia energetica.
+              Si es tu primera visita, empieza aqui; si vienes a buscar algo concreto, salta al
+              indice o al feed en un clic.
             </p>
           </aside>
         </div>
@@ -104,10 +105,42 @@
 
       <div class="home-shell">
         <div class="home-content">
-          <section class="featured-briefing card" id="briefing-destacado">
+          <section class="route-overview card" aria-labelledby="rutas-blog-title">
             <div class="section-heading">
               <div>
-                <p class="eyebrow">Briefing destacado</p>
+                <p class="eyebrow">Navegacion</p>
+                <h2 id="rutas-blog-title">Tres rutas para entender el blog</h2>
+              </div>
+            </div>
+
+            <div class="route-grid">
+              <article class="route-card">
+                <p class="story-kicker">Ruta 1</p>
+                <h3>Portada</h3>
+                <p>Empieza por la entrega mas reciente y por la seleccion editorial del momento.</p>
+                <a href="index.html" class="route-link">Abrir portada</a>
+              </article>
+
+              <article class="route-card">
+                <p class="story-kicker">Ruta 2</p>
+                <h3>Indice por meses</h3>
+                <p>Recorre el archivo por mes para localizar rapido cualquier periodo publicado.</p>
+                <a href="indice-mensual.html" class="route-link">Ir al indice</a>
+              </article>
+
+              <article class="route-card">
+                <p class="story-kicker">Ruta 3</p>
+                <h3>Briefings</h3>
+                <p>Escanea el feed completo con fecha, resumen corto y acceso directo a cada entrega.</p>
+                <a href="briefings.html" class="route-link">Ver briefings</a>
+              </article>
+            </div>
+          </section>
+
+          <section class="featured-briefing card" id="lo-mas-relevante">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Lo mas relevante</p>
                 <h2>🤖 KIPP Daily Tech Briefing</h2>
               </div>
               <a href="archivos/202605/20260519/tech-briefing-20260519.html" class="section-link"
@@ -136,7 +169,7 @@
               </article>
 
               <div class="featured-briefing-points">
-                <h3>Lo que marca la agenda</h3>
+                <h3>Por que abrir esta edicion primero</h3>
                 <ul class="editorial-points">
                   <li>Simulacion + AI siendo adoptado masivamente para entrenamiento de robotica autonoma.</li>
                   <li>Integracion de razonamiento autonomo con flotas roboticas.</li>
@@ -150,9 +183,9 @@
             <div class="section-heading">
               <div>
                 <p class="eyebrow">Ultimos briefings</p>
-                <h2>Feed reciente</h2>
+                <h2>Lo mas nuevo</h2>
               </div>
-              <a href="indice-mensual.html" class="section-link">Ver todos</a>
+              <a href="briefings.html" class="section-link">Abrir feed completo</a>
             </div>
 
             <div class="briefing-list">
@@ -196,22 +229,22 @@
             <div class="section-heading">
               <div>
                 <p class="eyebrow">Briefing</p>
-                <h2>Como se lee esta portada</h2>
+                <h2>Como usar esta portada</h2>
               </div>
             </div>
             <div class="overview-grid">
               <div>
-                <h3>Curacion semanal</h3>
+                <h3>Empieza por aqui</h3>
                 <p>
-                  Cada entrada resume noticias, tendencias e insights para convertir volumen de
-                  informacion en contexto util.
+                  La portada concentra la ultima publicacion y la lectura recomendada para no entrar
+                  al archivo a ciegas.
                 </p>
               </div>
               <div>
-                <h3>Archivo util</h3>
+                <h3>Sigue con contexto</h3>
                 <p>
-                  La navegacion prioriza lo ultimo, pero mantiene acceso directo al indice mensual y
-                  al historial de publicaciones.
+                  Desde aqui saltas al indice por meses o al feed premium sin perder continuidad de
+                  lectura.
                 </p>
               </div>
             </div>
@@ -219,10 +252,39 @@
         </div>
 
         <aside class="home-sidebar">
-          <section class="sidebar-card card" id="temas">
-            <div class="section-heading compact">
-              <div>
-                <p class="eyebrow">Temas</p>
+            <section class="sidebar-card card">
+              <div class="section-heading compact">
+                <div>
+                  <p class="eyebrow">Rutas</p>
+                  <h2>Navegacion del blog</h2>
+                </div>
+              </div>
+              <ul class="sidebar-list">
+                <li>
+                  <a href="index.html">
+                    <span>Portada</span>
+                    <small>Lo mas nuevo y relevante</small>
+                  </a>
+                </li>
+                <li>
+                  <a href="indice-mensual.html">
+                    <span>Indice por meses</span>
+                    <small>Archivo ordenado por fecha</small>
+                  </a>
+                </li>
+                <li>
+                  <a href="briefings.html">
+                    <span>Briefings</span>
+                    <small>Feed premium con resumen por item</small>
+                  </a>
+                </li>
+              </ul>
+            </section>
+
+            <section class="sidebar-card card" id="temas">
+              <div class="section-heading compact">
+                <div>
+                  <p class="eyebrow">Temas</p>
                 <h2>Radar editorial</h2>
               </div>
             </div>
@@ -238,38 +300,9 @@
             </div>
           </section>
 
-          <section class="sidebar-card card" id="archivo">
-            <div class="section-heading compact">
-              <div>
-                <p class="eyebrow">Archivo</p>
-                <h2>Navegacion rapida</h2>
-              </div>
-            </div>
-            <ul class="sidebar-list">
-              <li>
-                <a href="archivos/202605/20260519/tech-briefing-20260519.html">
-                  <span>Briefing 2026-05-19</span>
-                  <small>Ultima entrega</small>
-                </a>
-              </li>
-              <li>
-                <a href="archivos/202605/20260517/tech-briefing-20260517.html">
-                  <span>Briefing 2026-05-17</span>
-                  <small>Edicion anterior</small>
-                </a>
-              </li>
-              <li>
-                <a href="indice-mensual.html">
-                  <span>Indice mensual</span>
-                  <small>Vista completa del archivo</small>
-                </a>
-              </li>
-            </ul>
-          </section>
-
-          <section class="sidebar-card card">
-            <div class="section-heading compact">
-              <div>
+            <section class="sidebar-card card">
+              <div class="section-heading compact">
+                <div>
                 <p class="eyebrow">Metodo</p>
                 <h2>Sobre KIPP</h2>
               </div>
@@ -298,14 +331,14 @@
         </div>
 
         <div class="footer-links">
-          <div class="footer-section">
-            <h4>Explorar</h4>
-            <ul>
-              <li><a href="index.html">Portada</a></li>
-              <li><a href="#ultimos-briefings">Ultimos briefings</a></li>
-              <li><a href="indice-mensual.html">Archivo</a></li>
-            </ul>
-          </div>
+              <div class="footer-section">
+                <h4>Explorar</h4>
+                <ul>
+                  <li><a href="index.html">Portada</a></li>
+                  <li><a href="briefings.html">Briefings</a></li>
+                  <li><a href="indice-mensual.html">Indice por meses</a></li>
+                </ul>
+              </div>
 
           <div class="footer-section">
             <h4>Lecturas</h4>

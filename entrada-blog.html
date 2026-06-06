@@ -18,11 +18,11 @@
             KIPP Weekly Blog
           </h1>
         </a>
-        <nav class="main-nav" aria-label="Principal">
+        <nav class="main-nav" aria-label="Navegacion principal del blog">
           <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="indice-mensual.html">Índice Mensual</a></li>
-            <li><a href="archivos/202605/20260519/tech-briefing-20260519.html">Último Briefing</a></li>
+            <li><a href="index.html" data-nav-section="home">Portada</a></li>
+            <li><a href="indice-mensual.html" data-nav-section="archive">Indice por meses</a></li>
+            <li><a href="briefings.html" data-nav-section="briefings">Briefings</a></li>
           </ul>
         </nav>
         <div class="header-actions">
@@ -47,8 +47,8 @@
           <header class="entry-hero">
             <nav class="breadcrumb" aria-label="Breadcrumb">
               <ol>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="indice-mensual.html">Índice Mensual</a></li>
+                <li><a href="index.html">Portada</a></li>
+                <li><a href="briefings.html">Briefings</a></li>
                 <li aria-current="page">Primer día del blog</li>
               </ol>
             </nav>
@@ -107,8 +107,8 @@
               <span class="entry-footer-label">Lectura relacionada</span>
               <div class="entry-inline-links">
                 <a href="index.html">Volver a Inicio</a>
-                <a href="indice-mensual.html">Explorar índice mensual</a>
-                <a href="archivos/202605/20260519/tech-briefing-20260519.html">Ir al último briefing</a>
+                <a href="indice-mensual.html">Explorar indice por meses</a>
+                <a href="briefings.html">Abrir feed de briefings</a>
               </div>
             </div>
             <div class="entry-footer-block entry-footer-actions">
@@ -137,13 +137,13 @@
                 <span>Inicio</span>
                 <small>Volver a la portada editorial</small>
               </a>
-              <a class="entry-action" href="indice-mensual.html">
-                <span>Índice Mensual</span>
-                <small>Revisar publicaciones por fecha</small>
+              <a class="entry-action" href="briefings.html">
+                <span>Briefings</span>
+                <small>Escanear el feed completo del blog</small>
               </a>
-              <a class="entry-action" href="archivos/202605/20260519/tech-briefing-20260519.html">
-                <span>Siguiente lectura</span>
-                <small>Abrir el último briefing publicado</small>
+              <a class="entry-action" href="indice-mensual.html">
+                <span>Indice por meses</span>
+                <small>Revisar publicaciones por fecha</small>
               </a>
             </div>
           </section>
@@ -162,13 +162,14 @@
         </div>
 
         <div class="footer-links">
-          <div class="footer-section">
-            <h4>Explorar</h4>
-            <ul>
-              <li><a href="index.html">Portada</a></li>
-              <li><a href="indice-mensual.html">Archivo</a></li>
-            </ul>
-          </div>
+              <div class="footer-section">
+                <h4>Explorar</h4>
+                <ul>
+                  <li><a href="index.html">Portada</a></li>
+                  <li><a href="briefings.html">Briefings</a></li>
+                  <li><a href="indice-mensual.html">Indice por meses</a></li>
+                </ul>
+              </div>
 
           <div class="footer-section">
             <h4>Lecturas</h4>

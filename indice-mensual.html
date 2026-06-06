@@ -8,7 +8,7 @@
     <title>KIPP Weekly Blog | Índice Mensual</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body id="top">
+  <body id="top" data-nav-section="archive">
     <a class="skip-link" href="#contenido-principal">Saltar al contenido</a>
     <header class="site-header">
       <div class="header-container">
@@ -18,11 +18,11 @@
             KIPP Weekly Blog
           </h1>
         </a>
-        <nav class="main-nav" aria-label="Principal">
+        <nav class="main-nav" aria-label="Navegacion principal del blog">
           <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="indice-mensual.html" class="active">Índice Mensual</a></li>
-            <li><a href="archivos/202605/20260519/tech-briefing-20260519.html">Último Briefing</a></li>
+            <li><a href="index.html" data-nav-section="home">Portada</a></li>
+            <li><a href="indice-mensual.html" data-nav-section="archive">Índice por meses</a></li>
+            <li><a href="briefings.html" data-nav-section="briefings">Briefings</a></li>
           </ul>
         </nav>
         <div class="header-actions">
@@ -46,35 +46,35 @@
         <div class="hero-container hero-grid archive-hero-grid">
           <div class="hero-copy archive-hero-copy">
             <div class="hero-badge">
-              <span>Archivo editorial</span>
+              <span>Indice del blog</span>
               <span class="hero-badge-dot" aria-hidden="true"></span>
               <span>Actualizado semanalmente</span>
             </div>
 
-            <h2>Timeline premium para recorrer cada briefing con contexto, estado y acceso directo.</h2>
+            <h2>Indice por meses para recorrer el archivo sin perder el contexto de cada entrega.</h2>
 
             <p>
-              Un archivo mensual pensado para escanear rápido: jerarquía por mes, metadatos claros,
-              tags temáticos y CTAs directos para entrar al briefing correcto sin fricción.
+              Cada mes agrupa los briefings publicados y deja claro qué está activo, qué ya está
+              archivado y qué lectura abrir en cada tramo del historial.
             </p>
 
             <div class="hero-cta">
-              <a href="#archivo-mensual" class="btn btn-primary">Explorar archivo</a>
-              <a href="archivos/202605/20260519/tech-briefing-20260519.html" class="btn btn-secondary"
-                >Leer último briefing</a
+              <a href="#archivo-mensual" class="btn btn-primary">Explorar meses</a>
+              <a href="briefings.html" class="btn btn-secondary"
+                >Abrir briefings</a
               >
             </div>
 
             <div class="archive-key-points" aria-label="Ventajas del archivo">
-              <span>Vista mensual</span>
+              <span>Meses</span>
               <span>Estados editoriales</span>
-              <span>Tags por briefing</span>
+              <span>Acceso directo</span>
             </div>
           </div>
 
           <aside class="hero-panel archive-hero-panel" aria-label="Resumen del archivo">
             <div class="hero-panel-header">
-              <span class="eyebrow">Snapshot</span>
+              <span class="eyebrow">Resumen</span>
               <strong>2026</strong>
             </div>
             <dl class="hero-stats archive-stats">
@@ -105,23 +105,23 @@
             <div class="section-heading">
               <div>
                 <p class="eyebrow">Archivo mensual</p>
-                <h2 id="archivo-title">Briefings en timeline</h2>
+                 <h2 id="archivo-title">Meses del archivo</h2>
               </div>
-              <a href="index.html" class="section-link">Volver a portada</a>
+              <a href="briefings.html" class="section-link">Ver feed de briefings</a>
             </div>
 
             <div class="month-section" id="junio-2026">
               <div class="month-heading">
                 <div>
-                  <p class="month-kicker">Mes en curso</p>
+                  <p class="month-kicker">Mes en seguimiento</p>
                   <h3>Junio 2026</h3>
                 </div>
                 <span class="status-pill status-pill-live">En seguimiento</span>
               </div>
 
               <p class="month-summary">
-                El archivo de junio queda listo para recibir nuevas ediciones. Se mantendrá en esta
-                vista apenas se publique el siguiente briefing.
+                 Junio queda abierto como proximo bloque del blog. Cuando se publique una nueva
+                 entrega, aparecera aqui dentro del mismo indice mensual.
               </p>
 
               <article class="timeline-item timeline-item-upcoming" aria-label="Próximo briefing de junio 2026">
@@ -150,7 +150,7 @@
             <div class="month-section" id="mayo-2026">
               <div class="month-heading">
                 <div>
-                  <p class="month-kicker">Archivo disponible</p>
+                  <p class="month-kicker">Mes publicado</p>
                   <h3>Mayo 2026</h3>
                 </div>
                 <span class="status-pill status-pill-success">2 publicados</span>
@@ -241,10 +241,10 @@
 
         <aside class="archive-sidebar">
           <section class="sidebar-card card">
-            <div class="section-heading compact">
+             <div class="section-heading compact">
               <div>
-                <p class="eyebrow">Navegación</p>
-                <h2>Meses</h2>
+                 <p class="eyebrow">Navegación</p>
+                 <h2>Ir a un mes</h2>
               </div>
             </div>
             <ul class="sidebar-list archive-month-nav">
@@ -266,13 +266,13 @@
           <section class="sidebar-card card">
             <div class="section-heading compact">
               <div>
-                <p class="eyebrow">Lectura rápida</p>
-                <h2>Criterio editorial</h2>
+                 <p class="eyebrow">Continuidad</p>
+                 <h2>Otras rutas</h2>
               </div>
             </div>
             <div class="archive-notes">
-              <p>Fechas visibles, estado editorial y tags temáticos para localizar cada briefing en segundos.</p>
-              <p>Diseño alineado con la homepage: superficie elevada, tipografía editorial y CTAs claros.</p>
+              <p><a href="index.html">Portada</a> para volver a lo mas nuevo y relevante.</p>
+              <p><a href="briefings.html">Briefings</a> para ver el feed completo en formato lista.</p>
             </div>
           </section>
         </aside>
@@ -290,18 +290,19 @@
         </div>
 
         <div class="footer-links">
-          <div class="footer-section">
-            <h4>Explorar</h4>
-            <ul>
-              <li><a href="index.html">Portada</a></li>
-              <li><a href="#archivo-mensual">Timeline</a></li>
-            </ul>
-          </div>
+              <div class="footer-section">
+                <h4>Explorar</h4>
+                <ul>
+                  <li><a href="index.html">Portada</a></li>
+                  <li><a href="briefings.html">Briefings</a></li>
+                  <li><a href="#archivo-mensual">Indice por meses</a></li>
+                </ul>
+              </div>
 
-          <div class="footer-section">
-            <h4>Lecturas</h4>
-            <ul>
-              <li><a href="archivos/202605/20260519/tech-briefing-20260519.html">Último briefing</a></li>
+              <div class="footer-section">
+                <h4>Lecturas</h4>
+                <ul>
+                  <li><a href="archivos/202605/20260519/tech-briefing-20260519.html">Último briefing</a></li>
               <li><a href="#top">Volver arriba</a></li>
             </ul>
           </div>

@@ -253,6 +253,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const currentUrl = new URL(window.location.href);
   const currentPath = normalizePath(currentUrl.pathname);
   const mainNavLinks = Array.from(document.querySelectorAll(".main-nav a"));
+  const explicitNavSection = body.dataset.navSection || "";
 
   const routeMatches = mainNavLinks
     .map((link) => {
@@ -277,7 +278,11 @@ document.addEventListener("DOMContentLoaded", () => {
     .filter(Boolean)
     .sort((a, b) => b.score - a.score);
 
-  const activePageLink = routeMatches[0] ? routeMatches[0].link : null;
+  const explicitSectionLink = explicitNavSection
+    ? mainNavLinks.find((link) => link.dataset.navSection === explicitNavSection) || null
+    : null;
+
+  const activePageLink = explicitSectionLink || (routeMatches[0] ? routeMatches[0].link : null);
   mainNavLinks.forEach((link) => setActiveState(link, link === activePageLink));
 
   const focusTarget = (target) => {
