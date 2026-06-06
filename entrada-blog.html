@@ -8,10 +8,11 @@
     <title>KIPP Weekly Blog | Entrada</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body id="top">
+    <a class="skip-link" href="#contenido-principal">Saltar al contenido</a>
     <header class="site-header">
       <div class="header-container">
-        <a href="index.html" class="site-logo">
+        <a href="index.html" class="site-logo" aria-label="Ir al inicio de KIPP Weekly Blog">
           <h1>
             <span class="logo-icon">🔍</span>
             KIPP Weekly Blog
@@ -25,14 +26,14 @@
           </ul>
         </nav>
         <div class="header-actions">
-          <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+          <button type="button" class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <line x1="3" y1="6" x2="21" y2="6"></line>
               <line x1="3" y1="12" x2="21" y2="12"></line>
               <line x1="3" y1="18" x2="21" y2="18"></line>
             </svg>
           </button>
-          <button class="theme-toggle" aria-label="Cambiar tema" aria-pressed="false">
+          <button type="button" class="theme-toggle" aria-label="Cambiar tema" aria-pressed="false">
             <span class="theme-toggle-icon" aria-hidden="true"></span>
             <span class="theme-toggle-label">Modo oscuro</span>
           </button>
@@ -40,51 +41,148 @@
       </div>
     </header>
 
-    <main>
-      <article class="card">
-        <header>
-          <h2>Primer día del blog</h2>
-          <p class="meta">
-            <span>📅 Fecha: 2026-06-06</span>
-            <span>✍️ Autor: KIPP</span>
-          </p>
-          <div class="tags">
-            <span class="tag">Inicio</span>
-            <span class="tag">Anuncio</span>
-          </div>
-        </header>
-        <section class="entry-content">
-          <p>Hoy iniciamos nuestro blog semanal.</p>
-          <p>
-            Esta entrada es completamente sencilla, está en HTML puro y usa una estructura base 
-            compartida con el resto de páginas del sitio.
-          </p>
-          <h3>🎯 Objetivo del Blog</h3>
-          <p>
-            El propósito de KIPP Weekly Blog es centralizar y hacer accesible todo el conocimiento 
-            generado durante las investigaciones semanales. Cada briefing se convierte en una entrada 
-            estructurada y navegable.
-          </p>
-          <h3>📊 ¿Qué Encontrarás Aquí?</h3>
-          <ul>
-            <li>Briefings diarios de investigación</li>
-            <li>Análisis de tecnología y AI</li>
-            <li>Documentación de proyectos</li>
-            <li>Resúmenes ejecutivos semanales</li>
-          </ul>
-          <blockquote>
-            <strong>Nota:</strong> Este blog se actualiza automáticamente cada semana mediante 
-            un proceso automatizado que convierte los briefings de Markdown a HTML.
-          </blockquote>
-        </section>
-      </article>
+    <main class="entry-main" id="contenido-principal">
+      <div class="entry-shell">
+        <article class="entry-article card">
+          <header class="entry-hero">
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+              <ol>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="indice-mensual.html">Índice Mensual</a></li>
+                <li aria-current="page">Primer día del blog</li>
+              </ol>
+            </nav>
+
+            <div class="entry-kicker">Entrada editorial</div>
+            <h2>Primer día del blog</h2>
+
+            <div class="entry-meta-bar" aria-label="Metadatos del artículo">
+              <div class="entry-meta-chip">
+                <span class="entry-meta-label">Fecha</span>
+                <strong>2026-06-06</strong>
+              </div>
+              <div class="entry-meta-chip">
+                <span class="entry-meta-label">Autor</span>
+                <strong>KIPP</strong>
+              </div>
+              <div class="entry-meta-chip">
+                <span class="entry-meta-label">Formato</span>
+                <strong>Lectura</strong>
+              </div>
+            </div>
+
+            <div class="tags">
+              <span class="tag">Inicio</span>
+              <span class="tag">Anuncio</span>
+            </div>
+          </header>
+
+          <section class="entry-content" aria-label="Contenido principal del artículo">
+            <p>Hoy iniciamos nuestro blog semanal.</p>
+            <p>
+              Esta entrada es completamente sencilla, está en HTML puro y usa una estructura base
+              compartida con el resto de páginas del sitio.
+            </p>
+            <h3 id="objetivo-del-blog">🎯 Objetivo del Blog</h3>
+            <p>
+              El propósito de KIPP Weekly Blog es centralizar y hacer accesible todo el conocimiento
+              generado durante las investigaciones semanales. Cada briefing se convierte en una entrada
+              estructurada y navegable.
+            </p>
+            <h3 id="que-encontraras-aqui">📊 ¿Qué Encontrarás Aquí?</h3>
+            <ul>
+              <li>Briefings diarios de investigación</li>
+              <li>Análisis de tecnología y AI</li>
+              <li>Documentación de proyectos</li>
+              <li>Resúmenes ejecutivos semanales</li>
+            </ul>
+            <blockquote>
+              <strong>Nota:</strong> Este blog se actualiza automáticamente cada semana mediante
+              un proceso automatizado que convierte los briefings de Markdown a HTML.
+            </blockquote>
+          </section>
+
+          <footer class="entry-footer">
+            <div class="entry-footer-block">
+              <span class="entry-footer-label">Lectura relacionada</span>
+              <div class="entry-inline-links">
+                <a href="index.html">Volver a Inicio</a>
+                <a href="indice-mensual.html">Explorar índice mensual</a>
+                <a href="archivos/202605/20260519/tech-briefing-20260519.html">Ir al último briefing</a>
+              </div>
+            </div>
+            <div class="entry-footer-block entry-footer-actions">
+              <a href="#top">Volver arriba</a>
+              <button type="button" class="entry-utility-button js-print-page">Imprimir</button>
+            </div>
+          </footer>
+        </article>
+
+        <aside class="entry-sidebar" aria-label="Navegación contextual">
+          <section class="card sidebar-card entry-sidebar-card">
+            <p class="eyebrow">Navegación</p>
+            <h3>En este artículo</h3>
+            <nav class="entry-toc" aria-label="Tabla de contenidos">
+              <a href="#top">Introducción</a>
+              <a href="#objetivo-del-blog">🎯 Objetivo del Blog</a>
+              <a href="#que-encontraras-aqui">📊 ¿Qué Encontrarás Aquí?</a>
+            </nav>
+          </section>
+
+          <section class="card sidebar-card entry-sidebar-card">
+            <p class="eyebrow">Acciones</p>
+            <h3>Continuar explorando</h3>
+            <div class="entry-action-list">
+              <a class="entry-action" href="index.html">
+                <span>Inicio</span>
+                <small>Volver a la portada editorial</small>
+              </a>
+              <a class="entry-action" href="indice-mensual.html">
+                <span>Índice Mensual</span>
+                <small>Revisar publicaciones por fecha</small>
+              </a>
+              <a class="entry-action" href="archivos/202605/20260519/tech-briefing-20260519.html">
+                <span>Siguiente lectura</span>
+                <small>Abrir el último briefing publicado</small>
+              </a>
+            </div>
+          </section>
+        </aside>
+      </div>
     </main>
 
     <footer class="site-footer">
-      <p>&copy; <span id="current-year"></span> KIPP Weekly Blog. Diseñado con 🔍 y café.</p>
-      <div class="site-footer-links">
-        <a href="indice-mensual.html">Índice Mensual</a>
-        <a href="archivos/202605/20260519/tech-briefing-20260519.html">Último</a>
+      <div class="footer-container">
+        <div class="footer-brand">
+          <h3>
+            <span>🔍</span>
+            KIPP Weekly Blog
+          </h3>
+          <p>Investigación estructurada sobre tecnología e inteligencia artificial para lectura semanal.</p>
+        </div>
+
+        <div class="footer-links">
+          <div class="footer-section">
+            <h4>Explorar</h4>
+            <ul>
+              <li><a href="index.html">Portada</a></li>
+              <li><a href="indice-mensual.html">Archivo</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4>Lecturas</h4>
+            <ul>
+              <li><a href="archivos/202605/20260519/tech-briefing-20260519.html">Último briefing</a></li>
+              <li><a href="#top">Volver arriba</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; <span id="current-year"></span> KIPP Weekly Blog</p>
+        <p>Entrada editorial con navegación contextual y lectura cómoda.</p>
       </div>
     </footer>
     <script src="main.js"></script>
