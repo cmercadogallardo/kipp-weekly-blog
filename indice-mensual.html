@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Índice mensual de briefings tecnológicos de KIPP Weekly Blog" />
+    <meta name="description" content="Archivo mensual de briefings tecnológicos de KIPP Weekly Blog" />
     <meta name="theme-color" content="#2563eb" />
     <title>KIPP Weekly Blog | Índice Mensual</title>
     <link rel="stylesheet" href="styles.css" />
@@ -18,15 +18,17 @@
             KIPP Weekly Blog
           </h1>
         </a>
+
         <nav class="main-nav" aria-label="Navegacion principal del blog">
           <ul>
             <li><a href="index.html" data-nav-section="home">Portada</a></li>
-            <li><a href="indice-mensual.html" data-nav-section="archive">Índice por meses</a></li>
+            <li><a href="indice-mensual.html" data-nav-section="archive">Indice por meses</a></li>
             <li><a href="briefings.html" data-nav-section="briefings">Briefings</a></li>
           </ul>
         </nav>
+
         <div class="header-actions">
-          <button type="button" class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+          <button type="button" class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <line x1="3" y1="6" x2="21" y2="6"></line>
               <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -46,218 +48,169 @@
         <div class="hero-container hero-grid archive-hero-grid">
           <div class="hero-copy archive-hero-copy">
             <div class="hero-badge">
-              <span>Indice del blog</span>
+              <span>Archivo histórico</span>
               <span class="hero-badge-dot" aria-hidden="true"></span>
-              <span>Actualizado semanalmente</span>
+              <span>Navegación cronológica</span>
             </div>
 
-            <h2>Indice por meses para recorrer el archivo sin perder el contexto de cada entrega.</h2>
+            <h2>Explora todos los briefings organizados por mes para encontrar rapido lo que buscas.</h2>
 
             <p>
-              Cada mes agrupa los briefings publicados y deja claro qué está activo, qué ya está
-              archivado y qué lectura abrir en cada tramo del historial.
+              Esta vista agrupa las publicaciones por bloques mensuales, ideal para navegar el histórico o buscar ediciones especificas por fecha.
             </p>
 
             <div class="hero-cta">
-              <a href="#archivo-mensual" class="btn btn-primary">Explorar meses</a>
-              <a href="briefings.html" class="btn btn-secondary"
-                >Abrir briefings</a
-              >
+              <a href="briefings.html" class="btn btn-primary">Ver feed completo</a>
+              <a href="index.html" class="btn btn-secondary">Volver a portada</a>
             </div>
 
-            <div class="archive-key-points" aria-label="Ventajas del archivo">
-              <span>Meses</span>
-              <span>Estados editoriales</span>
-              <span>Acceso directo</span>
+            <div class="archive-key-points" aria-label="Claves de la vista de archivo">
+              <span>Organización por mes</span>
+              <span>Estado del mes</span>
+              <span>Lista de briefings</span>
             </div>
           </div>
 
           <aside class="hero-panel archive-hero-panel" aria-label="Resumen del archivo">
             <div class="hero-panel-header">
-              <span class="eyebrow">Resumen</span>
-              <strong>2026</strong>
+              <span class="eyebrow">Archivo</span>
+              <strong>9 briefings</strong>
             </div>
             <dl class="hero-stats archive-stats">
               <div>
-                <dt>Briefings publicados</dt>
-                <dd>2</dd>
+                <dt>Ultimo publicado</dt>
+                <dd>01 junio 2026</dd>
               </div>
               <div>
-                <dt>Mes activo</dt>
-                <dd>Junio 2026</dd>
+                <dt>Meses activos</dt>
+                <dd>Mayo - Junio 2026</dd>
               </div>
               <div>
-                <dt>Última actualización</dt>
-                <dd>19 mayo 2026</dd>
+                <dt>Total de meses</dt>
+                <dd>2 meses</dd>
               </div>
             </dl>
             <p class="hero-panel-note">
-              Solo fuentes públicas, navegación editorial consistente con la portada y lectura cómoda
-              desde móvil.
+              Usa este indice para navegar el histórico por bloques de tiempo en lugar de feed continuo.
             </p>
           </aside>
         </div>
       </section>
 
-      <div class="archive-shell" id="archivo-mensual">
+      <div class="archive-shell">
         <div class="archive-content">
-          <section class="archive-timeline card" aria-labelledby="archivo-title">
+          <!-- Junio 2026 -->
+          <section class="card" id="junio-2026">
             <div class="section-heading">
               <div>
-                <p class="eyebrow">Archivo mensual</p>
-                 <h2 id="archivo-title">Meses del archivo</h2>
+                <p class="eyebrow">Junio 2026</p>
+                <h2>En proceso</h2>
               </div>
-              <a href="briefings.html" class="section-link">Ver feed de briefings</a>
+              <span class="status-badge status-in-progress">En proceso</span>
             </div>
 
-            <div class="month-section" id="junio-2026">
-              <div class="month-heading">
-                <div>
-                  <p class="month-kicker">Mes en seguimiento</p>
-                  <h3>Junio 2026</h3>
-                </div>
-                <span class="status-pill status-pill-live">En seguimiento</span>
+            <p class="meta"><span>📊 1 briefing disponible</span></p>
+
+            <ul class="briefing-list">
+              <li>
+                <a href="archivos/202606/20260601/tech-briefing-20260601.html">
+                  <time datetime="2026-06-01">01 junio</time>
+                  <span>KIPP Daily Tech Briefing</span>
+                </a>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Mayo 2026 -->
+          <section class="card" id="mayo-2026">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Mayo 2026</p>
+                <h2>Completo</h2>
               </div>
-
-              <p class="month-summary">
-                 Junio queda abierto como proximo bloque del blog. Cuando se publique una nueva
-                 entrega, aparecera aqui dentro del mismo indice mensual.
-              </p>
-
-              <article class="timeline-item timeline-item-upcoming" aria-label="Próximo briefing de junio 2026">
-                <div class="timeline-rail" aria-hidden="true">
-                  <span class="timeline-dot"></span>
-                </div>
-                <div class="timeline-card">
-                  <div class="timeline-topline">
-                    <time datetime="2026-06">Junio 2026</time>
-                    <span class="status-pill status-pill-muted">Próximamente</span>
-                  </div>
-                  <h4>Siguiente briefing en preparación</h4>
-                  <p>
-                    Nueva entrega editorial en proceso. Cuando se publique aparecerá aquí con fecha,
-                    temas clave y acceso directo.
-                  </p>
-                  <div class="timeline-tags" aria-label="Etiquetas previstas">
-                    <span class="tag">AI</span>
-                    <span class="tag">Tendencias</span>
-                    <span class="tag">Archivo vivo</span>
-                  </div>
-                </div>
-              </article>
+              <span class="status-badge status-complete">Completo</span>
             </div>
 
-            <div class="month-section" id="mayo-2026">
-              <div class="month-heading">
-                <div>
-                  <p class="month-kicker">Mes publicado</p>
-                  <h3>Mayo 2026</h3>
-                </div>
-                <span class="status-pill status-pill-success">2 publicados</span>
-              </div>
+            <p class="meta"><span>📊 8 briefings disponibles</span></p>
 
-              <p class="month-summary">
-                Mayo concentra las primeras entregas del archivo con foco en robótica, infraestructura
-                AI y sistemas híbridos cloud-físico.
-              </p>
-
-              <div class="timeline-list">
-                <article class="timeline-item">
-                  <div class="timeline-rail" aria-hidden="true">
-                    <span class="timeline-dot"></span>
-                  </div>
-                  <div class="timeline-card">
-                    <div class="timeline-topline">
-                      <time datetime="2026-05-19">19 mayo 2026</time>
-                      <span class="status-pill status-pill-success">Publicado</span>
-                    </div>
-
-                    <div class="timeline-header">
-                      <div>
-                        <h4>KIPP Daily Tech Briefing</h4>
-                        <p class="timeline-description">
-                          Robots físicos, simulación con Nvidia Isaac Sim, Agentic AI y hardware más eficiente en una sola edición.
-                        </p>
-                      </div>
-                      <a class="timeline-cta" href="archivos/202605/20260519/tech-briefing-20260519.html"
-                        >Leer briefing</a
-                      >
-                    </div>
-
-                    <div class="timeline-meta" aria-label="Metadatos del briefing del 19 de mayo">
-                      <span>6 noticias seleccionadas</span>
-                      <span>Autor: KIPP</span>
-                      <span>09:03 AM</span>
-                    </div>
-
-                    <div class="timeline-tags" aria-label="Temas del briefing del 19 de mayo">
-                      <span class="tag">Robótica</span>
-                      <span class="tag">Simulación</span>
-                      <span class="tag">Agentic AI</span>
-                      <span class="tag">Infraestructura AI</span>
-                    </div>
-                  </div>
-                </article>
-
-                <article class="timeline-item">
-                  <div class="timeline-rail" aria-hidden="true">
-                    <span class="timeline-dot"></span>
-                  </div>
-                  <div class="timeline-card">
-                    <div class="timeline-topline">
-                      <time datetime="2026-05-17">17 mayo 2026</time>
-                      <span class="status-pill status-pill-success">Publicado</span>
-                    </div>
-
-                    <div class="timeline-header">
-                      <div>
-                        <h4>KIPP Daily Tech Briefing</h4>
-                        <p class="timeline-description">
-                          IA neuro-simbólica, automatización móvil y señales tempranas sobre la siguiente ola de herramientas inteligentes.
-                        </p>
-                      </div>
-                      <a class="timeline-cta" href="archivos/202605/20260517/tech-briefing-20260517.html"
-                        >Leer briefing</a
-                      >
-                    </div>
-
-                    <div class="timeline-meta" aria-label="Metadatos del briefing del 17 de mayo">
-                      <span>Edición archivada</span>
-                      <span>Autor: KIPP</span>
-                      <span>Lectura rápida</span>
-                    </div>
-
-                    <div class="timeline-tags" aria-label="Temas del briefing del 17 de mayo">
-                      <span class="tag">Neuro-symbolic AI</span>
-                      <span class="tag">Gemini</span>
-                      <span class="tag">Mobile automation</span>
-                    </div>
-                  </div>
-                </article>
-              </div>
-            </div>
+            <ul class="briefing-list">
+              <li>
+                <a href="archivos/202605/20260529/tech-briefing-20260529.html">
+                  <time datetime="2026-05-29">29 mayo</time>
+                  <span>KIPP Daily Tech Briefing</span>
+                </a>
+              </li>
+              <li>
+                <a href="archivos/202605/20260522/tech-briefing-20260522.html">
+                  <time datetime="2026-05-22">22 mayo</time>
+                  <span>KIPP Daily Tech Briefing</span>
+                </a>
+              </li>
+              <li>
+                <a href="archivos/202605/20260521/tech-briefing-20260521.html">
+                  <time datetime="2026-05-21">21 mayo</time>
+                  <span>KIPP Daily Tech Briefing</span>
+                </a>
+              </li>
+              <li>
+                <a href="archivos/202605/20260520/tech-briefing-20260520.html">
+                  <time datetime="2026-05-20">20 mayo</time>
+                  <span>KIPP Daily Tech Briefing</span>
+                </a>
+              </li>
+              <li>
+                <a href="archivos/202605/20260519/tech-briefing-20260519.html">
+                  <time datetime="2026-05-19">19 mayo</time>
+                  <span>KIPP Daily Tech Briefing</span>
+                </a>
+              </li>
+              <li>
+                <a href="archivos/202605/20260518/tech-briefing-20260518.html">
+                  <time datetime="2026-05-18">18 mayo</time>
+                  <span>KIPP Daily Tech Briefing</span>
+                </a>
+              </li>
+              <li>
+                <a href="archivos/202605/20260517/tech-briefing-20260517.html">
+                  <time datetime="2026-05-17">17 mayo</time>
+                  <span>KIPP Daily Tech Briefing</span>
+                </a>
+              </li>
+              <li>
+                <a href="archivos/202605/20260516/tech-briefing-20260516.html">
+                  <time datetime="2026-05-16">16 mayo</time>
+                  <span>KIPP Daily Tech Briefing</span>
+                </a>
+              </li>
+            </ul>
           </section>
         </div>
 
         <aside class="archive-sidebar">
           <section class="sidebar-card card">
-             <div class="section-heading compact">
+            <div class="section-heading compact">
               <div>
-                 <p class="eyebrow">Navegación</p>
-                 <h2>Ir a un mes</h2>
+                <p class="eyebrow">Rutas</p>
+                <h2>Navegacion del blog</h2>
               </div>
             </div>
-            <ul class="sidebar-list archive-month-nav">
+            <ul class="sidebar-list">
               <li>
-                <a href="#junio-2026">
-                  <span>Junio 2026</span>
-                  <small>En seguimiento</small>
+                <a href="index.html">
+                  <span>Portada</span>
+                  <small>Lo mas nuevo y relevante</small>
                 </a>
               </li>
               <li>
-                <a href="#mayo-2026">
-                  <span>Mayo 2026</span>
-                  <small>2 briefings publicados</small>
+                <a href="briefings.html">
+                  <span>Briefings</span>
+                  <small>Feed premium de lectura rapida</small>
+                </a>
+              </li>
+              <li>
+                <a href="indice-mensual.html">
+                  <span>Indice por meses</span>
+                  <small>Archivo agrupado por fecha</small>
                 </a>
               </li>
             </ul>
@@ -266,14 +219,24 @@
           <section class="sidebar-card card">
             <div class="section-heading compact">
               <div>
-                 <p class="eyebrow">Continuidad</p>
-                 <h2>Otras rutas</h2>
+                <p class="eyebrow">Meses</p>
+                <h2>Actividad</h2>
               </div>
             </div>
-            <div class="archive-notes">
-              <p><a href="index.html">Portada</a> para volver a lo mas nuevo y relevante.</p>
-              <p><a href="briefings.html">Briefings</a> para ver el feed completo en formato lista.</p>
-            </div>
+            <ul class="sidebar-list archive-month-nav">
+              <li>
+                <a href="#junio-2026">
+                  <span>Junio 2026</span>
+                  <small>1 briefing publicado</small>
+                </a>
+              </li>
+              <li>
+                <a href="#mayo-2026">
+                  <span>Mayo 2026</span>
+                  <small>8 briefings publicados</small>
+                </a>
+              </li>
+            </ul>
           </section>
         </aside>
       </div>
@@ -286,24 +249,24 @@
             <span>🔍</span>
             KIPP Weekly Blog
           </h3>
-          <p>Archivo mensual pensado para encontrar briefings rápido, incluso desde móvil.</p>
+          <p>Archivo mensual para navegar el histórico de briefings por bloques de tiempo.</p>
         </div>
 
         <div class="footer-links">
-              <div class="footer-section">
-                <h4>Explorar</h4>
-                <ul>
-                  <li><a href="index.html">Portada</a></li>
-                  <li><a href="briefings.html">Briefings</a></li>
-                  <li><a href="#archivo-mensual">Indice por meses</a></li>
-                </ul>
-              </div>
+          <div class="footer-section">
+            <h4>Explorar</h4>
+            <ul>
+              <li><a href="index.html">Portada</a></li>
+              <li><a href="briefings.html">Briefings</a></li>
+              <li><a href="indice-mensual.html">Indice por meses</a></li>
+            </ul>
+          </div>
 
-              <div class="footer-section">
-                <h4>Lecturas</h4>
-                <ul>
-                  <li><a href="archivos/202605/20260519/tech-briefing-20260519.html">Último briefing</a></li>
-              <li><a href="#top">Volver arriba</a></li>
+          <div class="footer-section">
+            <h4>Meses</h4>
+            <ul>
+              <li><a href="#junio-2026">Junio 2026</a></li>
+              <li><a href="#mayo-2026">Mayo 2026</a></li>
             </ul>
           </div>
         </div>
@@ -311,9 +274,10 @@
 
       <div class="footer-bottom">
         <p class="footer-copyright">&copy; <span id="current-year"></span> KIPP Weekly Blog</p>
-        <p>Timeline editorial con estados claros, tags y acceso directo.</p>
+        <p>Vista de archivo diseñada para navegacion cronologica clara y eficiente.</p>
       </div>
     </footer>
+
     <script src="main.js"></script>
   </body>
 </html>
