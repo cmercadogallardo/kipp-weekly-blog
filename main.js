@@ -41,14 +41,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  const normalizePath = (path) =>
+    path
+      .replace(/\/index\.html$/, "/")
+      .replace(/\/+$/, "") || "/";
+
   const navLinks = document.querySelectorAll(".main-nav a");
-  const currentPath = window.location.pathname.replace(/\/$/, "");
+  const currentPath = normalizePath(window.location.pathname);
   navLinks.forEach((link) => {
     const href = link.getAttribute("href");
     if (!href || href.startsWith("#")) return;
     const linkUrl = new URL(href, window.location.origin + window.location.pathname);
-    const normalized = linkUrl.pathname.replace(/\/$/, "");
-    if (normalized === currentPath || (currentPath.endsWith("/index.html") && normalized === currentPath.replace("/index.html", ""))) {
+    const normalized = normalizePath(linkUrl.pathname);
+    if (normalized === currentPath) {
       link.classList.add("active");
     }
   });
