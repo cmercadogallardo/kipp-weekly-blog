@@ -4,6 +4,7 @@
    ======================================== */
 
 :root {
+  --header-height: 72px;
   /* Paleta Principal - Azul Tecnológico Profesional */
   --primary-50: #eff6ff;
   --primary-100: #dbeafe;
@@ -76,6 +77,27 @@
   --transition-slow: 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+[data-theme="dark"] {
+  --bg-body: #0b1020;
+  --bg-surface: #131a2d;
+  --bg-elevated: #18233f;
+  --text-heading: #f3f7ff;
+  --text-body: #d2ddf5;
+  --text-muted: #99a9cc;
+  --border-light: #24304f;
+  --border-medium: #34466f;
+  --gray-50: #111932;
+  --gray-100: #1a2746;
+  --gray-200: #243457;
+  --gray-300: #334774;
+  --gray-400: #6f84b5;
+  --gray-500: #95a7cf;
+  --gray-600: #b7c4e0;
+  --gray-700: #d2dcf0;
+  --gray-800: #e9effa;
+  --gray-900: #f6f9ff;
+}
+
 /* ========================================
    Google Fonts Import
    ======================================== */
@@ -107,6 +129,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  min-height: 100vh;
 }
 
 /* Selection */
@@ -129,7 +152,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(255, 255, 255, 0.85);
+  background: color-mix(in oklab, var(--bg-elevated) 88%, transparent);
   backdrop-filter: blur(12px) saturate(180%);
   -webkit-backdrop-filter: blur(12px) saturate(180%);
   border-bottom: 1px solid var(--border-light);
@@ -148,6 +171,11 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
+  min-height: var(--header-height);
+}
+
+.site-logo {
+  text-decoration: none;
 }
 
 .site-header h1 {
@@ -239,19 +267,56 @@ body {
   display: none;
   padding: 0.5rem;
   background: transparent;
-  border: none;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
   cursor: pointer;
   color: var(--text-heading);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-light);
+  background: var(--bg-surface);
+  color: var(--text-body);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.875rem;
+}
+
+.theme-toggle:hover {
+  border-color: var(--primary-300);
+}
+
+.theme-toggle .theme-toggle-label {
+  font-weight: 500;
+}
+
+[data-theme="dark"] .theme-toggle-icon::before {
+  content: "🌙";
+}
+
+.theme-toggle-icon::before {
+  content: "☀️";
 }
 
 /* Mobile Navigation */
 @media (max-width: 768px) {
   .main-nav {
     position: fixed;
-    top: 60px;
+    top: var(--header-height);
     left: 0;
     right: 0;
-    background: rgba(255, 255, 255, 0.98);
+    background: color-mix(in oklab, var(--bg-elevated) 92%, transparent);
     backdrop-filter: blur(12px);
     padding: 1rem 1.5rem;
     border-bottom: 1px solid var(--border-light);
@@ -280,6 +345,16 @@ body {
   
   .menu-toggle {
     display: block;
+  }
+
+  .theme-toggle {
+    padding: 0.5rem;
+    min-width: 2.5rem;
+    justify-content: center;
+  }
+
+  .theme-toggle .theme-toggle-label {
+    display: none;
   }
 }
 
@@ -679,10 +754,29 @@ main {
    ======================================== */
 
 .site-footer {
-  background: var(--gray-900);
+  background: color-mix(in oklab, var(--gray-900) 85%, #000000);
   color: var(--gray-400);
   padding: 3rem 1.5rem;
   margin-top: 4rem;
+}
+
+.site-footer-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0.75rem;
+}
+
+.site-footer-links a {
+  color: var(--gray-400);
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+
+.site-footer-links a:hover {
+  color: #ffffff;
 }
 
 .footer-container {
