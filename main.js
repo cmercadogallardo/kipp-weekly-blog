@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   const normalizePath = (path) => {
-    const withoutIndex = path.replace(/\/index\.html$/, "/");
+    const withoutIndex = path.replace(/index\.html$/, "");
     const trimmed = withoutIndex.replace(/\/+$/, "");
     return trimmed.length > 0 ? trimmed : "/";
   };
@@ -55,11 +55,13 @@ document.addEventListener("DOMContentLoaded", () => {
   navLinks.forEach((link) => {
     const href = link.getAttribute("href");
     if (!href || href.startsWith("#")) return;
-    const linkUrl = new URL(href, window.location.href);
-    const normalized = normalizePath(linkUrl.pathname);
-    if (normalized === currentPath) {
-      link.classList.add("active");
-    }
+    try {
+      const linkUrl = new URL(href, window.location.href);
+      const normalized = normalizePath(linkUrl.pathname);
+      if (normalized === currentPath) {
+        link.classList.add("active");
+      }
+    } catch (_error) {}
   });
 
   const header = document.querySelector(".site-header");
