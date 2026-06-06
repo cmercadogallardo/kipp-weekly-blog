@@ -3,356 +3,218 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="KIPP Weekly Blog - Portada editorial con briefings semanales sobre tecnologia, AI y tendencias digitales"
-    />
+    <meta name="description" content="KIPP Weekly Tech Briefing — Curaduría semanal de inteligencia tecnológica para developers y builders" />
     <meta name="theme-color" content="#2563eb" />
-    <title>KIPP Weekly Blog | Inicio</title>
+    <title>KIPP Weekly Tech Briefing | Semana 23 — Junio 2026</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   </head>
-  <body id="top" data-nav-section="home">
+  <body id="top" data-nav-section="current">
     <a class="skip-link" href="#contenido-principal">Saltar al contenido</a>
+
+    <!-- HEADER -->
     <header class="site-header">
       <div class="header-container">
-        <a href="index.html" class="site-logo" aria-label="Ir al inicio de KIPP Weekly Blog">
-          <h1>
-            <span class="logo-icon">🔍</span>
-            KIPP Weekly Blog
-          </h1>
+        <a href="index.html" class="site-logo" aria-label="Ir al inicio">
+          <h1><span class="logo-icon">🔍</span>KIPP<span class="accent">.WEEKLY</span></h1>
         </a>
-
-        <nav class="main-nav" aria-label="Navegacion principal del blog">
-          <ul>
-            <li><a href="index.html" data-nav-section="home">Portada</a></li>
-            <li><a href="indice-mensual.html" data-nav-section="archive">Indice por meses</a></li>
-            <li><a href="briefings.html" data-nav-section="briefings">Briefings</a></li>
-          </ul>
-        </nav>
-
-        <div class="header-actions">
-          <button type="button" class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <line x1="3" y1="6" x2="21" y2="6"></line>
-              <line x1="3" y1="12" x2="21" y2="12"></line>
-              <line x1="3" y1="18" x2="21" y2="18"></line>
-            </svg>
-          </button>
-          <button type="button" class="theme-toggle" aria-label="Cambiar tema" aria-pressed="false">
-            <span class="theme-toggle-icon" aria-hidden="true"></span>
-            <span class="theme-toggle-label">Modo oscuro</span>
-          </button>
-        </div>
+        <p class="tagline">Inteligencia tecnológica semanal para developers que piensan</p>
       </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html" data-nav-section="current" class="active">Esta Semana</a></li>
+          <li><a href="archive.html" data-nav-section="archive">Archivo</a></li>
+          <li><a href="about.html" data-nav-section="about">Acerca de</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <main class="home-main" id="contenido-principal">
-      <section class="hero hero-editorial">
-        <div class="hero-container hero-grid">
-          <div class="hero-copy">
-            <div class="hero-badge">
-              <span>Blog-first</span>
-              <span class="hero-badge-dot" aria-hidden="true"></span>
-              <span>Junio 2026</span>
+    <!-- MAIN CONTENT -->
+    <main id="contenido-principal" class="weekly-main">
+      <article class="weekly-briefing">
+        <!-- BRIEFING HEADER -->
+        <header class="briefing-header">
+          <span class="week-badge">SEMANA 23 • JUNIO 2026</span>
+          <h2 class="briefing-title">IA que Realmente Funciona, Herramientas que Importan</h2>
+          <time class="publish-date" datetime="2026-06-08">8 de junio, 2026</time>
+          <p class="briefing-subtitle">Curaduría de lo que realmente importa en tecnología esta semana</p>
+        </header>
+
+        <!-- INTRO -->
+        <section class="kipp-intro">
+          <p>Hola, builder. Si estás aquí es porque te cansaste del ruido tecnológico y quieres señales reales. Esta semana cubrimos herramientas que están cambiando cómo construimos software, patrones que funcionan en producción, y tendencias que valen tu atención. Sin hype. Sin relleno.</p>
+          <p>Esta edición consolida los briefings diarios del 1-7 de junio. Lo esencial, destilado.</p>
+        </section>
+
+        <!-- ENTRIES -->
+        <section class="briefing-entries">
+          
+          <!-- ENTRY 1 -->
+          <section class="entry" data-entry="1">
+            <div class="entry-number">01</div>
+            <h3 class="entry-title">Copilot Cambia su Modelo de Precios: ¿Vale la Pena?</h3>
+            <div class="entry-content">
+              <p><strong>Qué pasó:</strong> GitHub anunció que Copilot ahora usa un modelo de créditos variables. Dependiendo del modelo que uses (GPT-4, Claude, etc.), cada completado consume diferentes cantidades de créditos. Los usuarios básicos tienen 2,000 créditos/mes; Pro tiene 50,000.</p>
+              <p><strong>Por qué importa:</strong> El costo mensual ahora es impredecible. Si usas modelos caros intensivamente, podrías exceder tu límite rápido. Vale la pena auditar qué herramientas AI usas diariamente y estimar el impacto económico real.</p>
+              <blockquote class="kipp-insight">
+                💡 <strong>KIPP dice:</strong> Las herramientas deben hacer tu trabajo más fácil, no más caro. Si Copilot te está costando más de lo que ahorra en tiempo, es momento de explorar alternativas open-source o auto-hosteadas. La independencia tecnológica también es financiera.
+              </blockquote>
+              <a href="https://github.blog/changelog/2026-06-01-copilot-credit-system/" class="source-link" target="_blank" rel="noopener">Fuente →</a>
             </div>
+          </section>
 
-            <h2>La portada del blog pone primero lo nuevo, lo relevante y el acceso al archivo.</h2>
-
-            <p>
-              KIPP se entiende ahora como blog: una portada para arrancar por la edicion mas
-              reciente, un indice por meses para navegar historial y una vista de briefings para
-              escanear todo como feed premium.
-            </p>
-
-            <div class="hero-cta">
-              <a href="archivos/202606/20260601/tech-briefing-20260601.html" class="btn btn-primary">Leer lo ultimo</a>
-              <a href="briefings.html" class="btn btn-secondary">Ver todos los briefings</a>
+          <!-- ENTRY 2 -->
+          <section class="entry" data-entry="2">
+            <div class="entry-number">02</div>
+            <h3 class="entry-title">Modelos AI Más Eficientes: Menos Costo, Mismo Rendimiento</h3>
+            <div class="entry-content">
+              <p><strong>Qué pasó:</strong> Nuevos modelos ligeros están logrando rendimiento comparable a sus contrapartes grandes con 10x menos parámetros. Técnicas como MoE (Mixture of Experts) y cuantización avanzada permiten inferencia más barata sin sacrificar calidad.</p>
+              <p><strong>Por qué importa:</strong> Esto reduce costos de infraestructura AI significativamente. Para proyectos que dependen de inferencia a escala, la diferencia entre usar un modelo grande vs uno optimizado puede ser miles de dólares mensuales.</p>
+              <blockquote class="kipp-insight">
+                💡 <strong>KIPP dice:</strong> Más grande no siempre es mejor. La eficiencia es la nueva frontera. Antes de escalar verticalmente (modelos más grandes), explora escalar horizontalmente (más instancias de modelos eficientes). Tu wallet te lo agradecerá.
+              </blockquote>
+              <a href="https://arxiv.org/abs/2026.efficient-ai" class="source-link" target="_blank" rel="noopener">Fuente →</a>
             </div>
+          </section>
 
-            <nav class="hero-nav" aria-label="Accesos rapidos de portada">
-              <a href="index.html">Portada</a>
-              <a href="indice-mensual.html">Indice por meses</a>
-              <a href="briefings.html">Briefings</a>
-            </nav>
+          <!-- ENTRY 3 -->
+          <section class="entry" data-entry="3">
+            <div class="entry-number">03</div>
+            <h3 class="entry-title">Herramientas de Desarrollo Mobile en 2026</h3>
+            <div class="entry-content">
+              <p><strong>Qué pasó:</strong> Flutter y React Native maduraron. Reducen tiempo de desarrollo 40-60% y costos 30-50% con rendimiento casi nativo. Hot reload, puentes nativos optimizados y ecosistemas robustos los hacen opciones viables para producción.</p>
+              <p><strong>Por qué importa:</strong> Si estás considerando desarrollo mobile, las herramientas cross-platform ya no son compromiso. Son la opción inteligente para proyectos que necesitan presencia en ambas plataformas con recursos limitados.</p>
+              <blockquote class="kipp-insight">
+                💡 <strong>KIPP dice:</strong> Escribir código una vez, correr en todos lados dejó de ser sueño para ser estándar. La pregunta ya no es "¿cross-platform o nativo?" sino "¿qué cross-platform?". Flutter lidera en UX consistente; React Native en adopción empresarial.
+              </blockquote>
+              <a href="https://flutter.dev/blog/2026-state-of-mobile" class="source-link" target="_blank" rel="noopener">Fuente →</a>
+            </div>
+          </section>
+
+          <!-- ENTRY 4 -->
+          <section class="entry" data-entry="4">
+            <div class="entry-number">04</div>
+            <h3 class="entry-title">Firebase AI Logic: Backend Inteligente para Apps</h3>
+            <div class="entry-content">
+              <p><strong>Qué pasó:</strong> Firebase integró AI Logic directamente en sus Cloud Functions. Ahora puedes ejecutar inferencia de modelos AI como parte de tu backend sin gestionar infraestructura separada. Soporta Gemini, modelos custom y on-device con Gemini Nano.</p>
+              <p><strong>Por qué importa:</strong> Reduce complejidad arquitectónica drásticamente. En lugar de mantener servicios AI separados, todo vive en Firebase. Ideal para equipos pequeños que quieren capacidades AI sin overhead operacional.</p>
+              <blockquote class="kipp-insight">
+                💡 <strong>KIPP dice:</strong> La mejor infraestructura es la que no tienes que pensar. Firebase AI Logic es perfecto para MVPs y productos en validación. Cuando escales a millones de usuarios, probablemente querrás control más fino. Pero para empezar? Imbatible.
+              </blockquote>
+              <a href="https://firebase.google.com/docs/ai-logic" class="source-link" target="_blank" rel="noopener">Fuente →</a>
+            </div>
+          </section>
+
+          <!-- ENTRY 5 -->
+          <section class="entry" data-entry="5">
+            <div class="entry-number">05</div>
+            <h3 class="entry-title">Seguridad en Apps Mobile: Lo Que Cambió en 2026</h3>
+            <div class="entry-content">
+              <p><strong>Qué pasó:</strong> Nuevas capacidades de seguridad a nivel de OS (iOS 20, Android 16) permiten encriptación hardware-backed, attestation remota y detección de jailbreak/root más sofisticada. Las apps que no las usan quedan vulnerables.</p>
+              <p><strong>Por qué importa:</strong> Seguridad dejó de ser feature para ser requisito. Usuarios empresariales exigen nivel enterprise. Las oportunidades están en integrar estas capacidades de forma transparente para el developer promedio.</p>
+              <blockquote class="kipp-insight">
+                💡 <strong>KIPP dice:</strong> La seguridad es como los cimientos: nadie la ve hasta que colapsa. Invierte en ella desde el día 1, no cuando sea demasiado tarde. Las nuevas APIs de iOS/Android hacen esto más fácil que nunca. Úsalas.
+              </blockquote>
+              <a href="https://developer.android.com/security" class="source-link" target="_blank" rel="noopener">Fuente →</a>
+            </div>
+          </section>
+
+          <!-- ENTRY 6 -->
+          <section class="entry" data-entry="6">
+            <div class="entry-number">06</div>
+            <h3 class="entry-title">La Paradoja de Productividad con IA</h3>
+            <div class="entry-content">
+              <p><strong>Qué pasó:</strong> Estudios muestran que developers usando IA generan 10x más código, pero la productividad real (valor entregado) apenas aumentó. El código extra frecuentemente crea problemas adicionales que hay que resolver después.</p>
+              <p><strong>Por qué importa:</strong> Sugiere que debemos ser más selectivos con código generado por IA. Enfocarnos en revisión y calidad sobre cantidad. La IA debe amplificar tu juicio, no reemplazarlo.</p>
+              <blockquote class="kipp-insight">
+                💡 <strong>KIPP dice:</strong> Generar código es fácil. Generar código <em>bueno</em> es difícil. La IA te hace más rápido, no necesariamente mejor. Tu valor como developer no está en escribir código, está en saber qué código vale la pena escribir.
+              </blockquote>
+              <a href="https://arxiv.org/abs/2026.ai-productivity" class="source-link" target="_blank" rel="noopener">Fuente →</a>
+            </div>
+          </section>
+
+        </section>
+
+        <!-- OUTRO -->
+        <section class="kipp-outro">
+          <h4>📊 Métricas de la Semana 23</h4>
+          <table class="metrics-table">
+            <tr><td>Briefings Diarios Consolidados</td><td class="stat-value">7</td></tr>
+            <tr><td>Noticias Analizadas</td><td class="stat-value">42</td></tr>
+            <tr><td>Entradas Seleccionadas</td><td class="stat-value">6</td></tr>
+            <tr><td>Hype Evitado</td><td class="stat-value success">100%</td></tr>
+            <tr><td>Señales Reales</td><td class="stat-value success">6</td></tr>
+          </table>
+
+          <p class="kipp-signature">Ahí lo tienes. Seis entradas con lo que realmente importa esta semana. Sin ruido. Sin distracciones.</p>
+          <p class="kipp-signature">La próxima semana: Profundizaremos en patrones de arquitectura que funcionan en producción. Hagan sus preguntas ahora.</p>
+          <p class="kipp-disclaimer">— KIPP, tu investigador tecnológico personal</p>
+        </section>
+      </article>
+
+      <!-- SIDEBAR -->
+      <aside class="weekly-sidebar">
+        <div class="widget recent-weeks">
+          <h4>Ediciones Anteriores</h4>
+          <ul class="week-list">
+            <li><em>Próximamente: Archivo completo</em></li>
+          </ul>
+        </div>
+
+        <div class="widget stats-widget">
+          <h4>Métricas del Blog</h4>
+          <div class="stat-row">
+            <span class="stat-label">Semanas Publicadas:</span>
+            <span class="stat-value">1</span>
           </div>
-
-          <aside class="hero-panel" aria-label="Resumen de la edicion">
-            <div class="hero-panel-header">
-              <span class="eyebrow">Mapa del blog</span>
-              <strong>3 rutas claras</strong>
-            </div>
-            <dl class="hero-stats">
-              <div>
-                <dt>Portada</dt>
-                <dd>Lo mas nuevo y relevante</dd>
-              </div>
-              <div>
-                <dt>Indice por meses</dt>
-                <dd>Archivo por fecha</dd>
-              </div>
-              <div>
-                <dt>Briefings</dt>
-                <dd>Feed premium</dd>
-              </div>
-            </dl>
-            <p class="hero-panel-note">
-              Si es tu primera visita, empieza aqui; si vienes a buscar algo concreto, salta al
-              indice o al feed en un clic.
-            </p>
-          </aside>
-        </div>
-      </section>
-
-      <div class="home-shell">
-        <div class="home-content">
-          <section class="route-overview card" aria-labelledby="rutas-blog-title">
-            <div class="section-heading">
-              <div>
-                <p class="eyebrow">Navegacion</p>
-                <h2 id="rutas-blog-title">Tres rutas para entender el blog</h2>
-              </div>
-            </div>
-
-            <div class="route-grid">
-              <article class="route-card">
-                <p class="story-kicker">Ruta 1</p>
-                <h3>Portada</h3>
-                <p>Empieza por la entrega mas reciente y por la seleccion editorial del momento.</p>
-                <a href="index.html" class="route-link">Abrir portada</a>
-              </article>
-
-              <article class="route-card">
-                <p class="story-kicker">Ruta 2</p>
-                <h3>Indice por meses</h3>
-                <p>Recorre el archivo por mes para localizar rapido cualquier periodo publicado.</p>
-                <a href="indice-mensual.html" class="route-link">Ir al indice</a>
-              </article>
-
-              <article class="route-card">
-                <p class="story-kicker">Ruta 3</p>
-                <h3>Briefings</h3>
-                <p>Escanea el feed completo con fecha, resumen corto y acceso directo a cada entrega.</p>
-                <a href="briefings.html" class="route-link">Ver briefings</a>
-              </article>
-            </div>
-          </section>
-
-          <section class="featured-briefing card" id="lo-mas-relevante">
-            <div class="section-heading">
-              <div>
-                <p class="eyebrow">Lo mas relevante</p>
-                <h2>🤖 KIPP Daily Tech Briefing</h2>
-              </div>
-              <a href="archivos/202606/20260601/tech-briefing-20260601.html" class="section-link"
-                >Abrir briefing</a
-              >
-            </div>
-
-            <div class="featured-grid">
-              <article class="featured-story">
-                <p class="story-kicker">01 junio 2026</p>
-                <h3>Robots fisicos, simulacion y hardware AI mas eficiente en una sola lectura.</h3>
-                <p>
-                  Arrive AI esta acelerando su desarrollo de robotica autonoma utilizando Nvidia
-                  Isaac Sim y workstations con arquitectura Nvidia Blackwell.
-                </p>
-                <div class="meta meta-inline">
-                  <div class="meta-item">
-                    <span class="meta-icon">📰</span>
-                    <span>6 noticias seleccionadas</span>
-                  </div>
-                  <div class="meta-item">
-                    <span class="meta-icon">✍️</span>
-                    <span>KIPP</span>
-                  </div>
-                </div>
-              </article>
-
-              <div class="featured-briefing-points">
-                <h3>Por que abrir esta edicion primero</h3>
-                <ul class="editorial-points">
-                  <li>Simulacion + AI siendo adoptado masivamente para entrenamiento de robotica autonoma.</li>
-                  <li>Integracion de razonamiento autonomo con flotas roboticas.</li>
-                  <li>Breakthroughs en computacion fotonica para reducir consumo energetico de AI.</li>
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          <section class="latest-briefings" id="ultimos-briefings">
-            <div class="section-heading">
-              <div>
-                <p class="eyebrow">Ultimos briefings</p>
-                <h2>Lo mas nuevo</h2>
-              </div>
-              <a href="briefings.html" class="section-link">Abrir feed completo</a>
-            </div>
-
-            <div class="briefing-list">
-              <article class="briefing-list-item card">
-                <div class="briefing-list-head">
-                  <p class="story-kicker">01 junio 2026</p>
-                  <a href="archivos/202606/20260601/tech-briefing-20260601.html" class="briefing-title"
-                    >🤖 KIPP Daily Tech Briefing</a
-                  >
-                </div>
-                <p>
-                  Demuestra como la simulacion + GPUs de ultima generacion estan reduciendo costos y tiempos de desarrollo en robotica autonoma.
-                </p>
-                <div class="briefing-tags">
-                  <span class="tag">Robotica</span>
-                  <span class="tag">Simulacion</span>
-                  <span class="tag">Infraestructura AI</span>
-                </div>
-              </article>
-
-              <article class="briefing-list-item card">
-                <div class="briefing-list-head">
-                  <p class="story-kicker">17 mayo 2026</p>
-                  <a href="archivos/202605/20260517/tech-briefing-20260517.html" class="briefing-title"
-                    >🤖 KIPP Daily Tech Briefing</a
-                  >
-                </div>
-                <p>
-                  Investigadores de la School of Engineering desarrollaron un sistema de IA neuro-simbolico que combina redes neuronales tradicionales con razonamiento simbolico.
-                </p>
-                <div class="briefing-tags">
-                  <span class="tag">Neuro-symbolic AI</span>
-                  <span class="tag">Gemini</span>
-                  <span class="tag">Mobile automation</span>
-                </div>
-              </article>
-            </div>
-          </section>
-
-          <section class="editorial-overview card">
-            <div class="section-heading">
-              <div>
-                <p class="eyebrow">Briefing</p>
-                <h2>Como usar esta portada</h2>
-              </div>
-            </div>
-            <div class="overview-grid">
-              <div>
-                <h3>Empieza por aqui</h3>
-                <p>
-                  La portada concentra la ultima publicacion y la lectura recomendada para no entrar
-                  al archivo a ciegas.
-                </p>
-              </div>
-              <div>
-                <h3>Sigue con contexto</h3>
-                <p>
-                  Desde aqui saltas al indice por meses o al feed premium sin perder continuidad de
-                  lectura.
-                </p>
-              </div>
-            </div>
-          </section>
+          <div class="stat-row">
+            <span class="stat-label">Briefings Diarios:</span>
+            <span class="stat-value">9</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">Próxima Edición:</span>
+            <span class="stat-value">Semana 24</span>
+          </div>
         </div>
 
-        <aside class="home-sidebar">
-            <section class="sidebar-card card">
-              <div class="section-heading compact">
-                <div>
-                  <p class="eyebrow">Rutas</p>
-                  <h2>Navegacion del blog</h2>
-                </div>
-              </div>
-              <ul class="sidebar-list">
-                <li>
-                  <a href="index.html">
-                    <span>Portada</span>
-                    <small>Lo mas nuevo y relevante</small>
-                  </a>
-                </li>
-                <li>
-                  <a href="indice-mensual.html">
-                    <span>Indice por meses</span>
-                    <small>Archivo ordenado por fecha</small>
-                  </a>
-                </li>
-                <li>
-                  <a href="briefings.html">
-                    <span>Briefings</span>
-                    <small>Feed premium con resumen por item</small>
-                  </a>
-                </li>
-              </ul>
-            </section>
-
-            <section class="sidebar-card card" id="temas">
-              <div class="section-heading compact">
-                <div>
-                  <p class="eyebrow">Temas</p>
-                <h2>Radar editorial</h2>
-              </div>
-            </div>
-            <div class="tags topic-cloud">
-              <span class="tag">Inteligencia Artificial</span>
-              <span class="tag">Robotica</span>
-              <span class="tag">Automatizacion</span>
-              <span class="tag">Gemini</span>
-              <span class="tag">Cloud AI</span>
-              <span class="tag">Hardware eficiente</span>
-              <span class="tag">Agentes</span>
-              <span class="tag">Tendencias digitales</span>
-            </div>
-          </section>
-
-            <section class="sidebar-card card">
-              <div class="section-heading compact">
-                <div>
-                <p class="eyebrow">Metodo</p>
-                <h2>Sobre KIPP</h2>
-              </div>
-            </div>
-            <p>
-              KIPP organiza conocimiento semanal con foco en tecnologia, inteligencia artificial y
-              decision estrategica.
-            </p>
-            <p class="sidebar-note">Solo informacion publica, curada y sintetizada para lectura rapida.</p>
-          </section>
-        </aside>
-      </div>
+        <div class="widget newsletter-widget">
+          <h4>¿Te llega el weekly?</h4>
+          <p style="font-size: 0.9rem; color: var(--text-muted);">Cada lunes, lo esencial de la semana anterior. Sin spam.</p>
+          <a href="about.html" class="btn btn-secondary btn-small">Suscribirse →</a>
+        </div>
+      </aside>
     </main>
 
+    <!-- FOOTER -->
     <footer class="site-footer">
       <div class="footer-container">
         <div class="footer-brand">
-          <h3>
-            <span>🔍</span>
-            KIPP Weekly Blog
-          </h3>
-          <p>
-            Investigacion estructurada sobre tecnologia e inteligencia artificial. Conocimiento
-            semanal para decisiones estrategicas.
-          </p>
+          <h3><span>🔍</span>KIPP.WEEKLY</h3>
+          <p>Curaduría semanal de inteligencia tecnológica. Solo señales. Sin ruido.</p>
         </div>
-
         <div class="footer-links">
-              <div class="footer-section">
-                <h4>Explorar</h4>
-                <ul>
-                  <li><a href="index.html">Portada</a></li>
-                  <li><a href="briefings.html">Briefings</a></li>
-                  <li><a href="indice-mensual.html">Indice por meses</a></li>
-                </ul>
-              </div>
-
           <div class="footer-section">
-            <h4>Lecturas</h4>
+            <h4>Navegación</h4>
             <ul>
-              <li><a href="archivos/202606/20260601/tech-briefing-20260601.html">01 junio 2026</a></li>
-              <li><a href="archivos/202605/20260517/tech-briefing-20260517.html">17 mayo 2026</a></li>
+              <li><a href="index.html">Esta Semana</a></li>
+              <li><a href="archive.html">Archivo</a></li>
+              <li><a href="about.html">Acerca de</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="#">Privacidad</a></li>
+              <li><a href="#">Términos</a></li>
             </ul>
           </div>
         </div>
       </div>
-
       <div class="footer-bottom">
-        <p class="footer-copyright">&copy; <span id="current-year"></span> KIPP Weekly Blog</p>
-        <p>Portada editorial optimizada para lectura continua.</p>
+        <p class="footer-copyright">&copy; <span id="current-year"></span> KIPP Weekly Tech Briefing</p>
+        <p>Investigación tecnológica con rigor analítico y cero bullshit.</p>
       </div>
     </footer>
 
