@@ -3,225 +3,185 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Archive completo de briefings tecnológicos - KIPP Weekly Blog" />
+    <meta name="description" content="Archivo histórico de KIPP Weekly Tech Briefing — Todas las ediciones anteriores" />
     <meta name="theme-color" content="#2563eb" />
-    <title>KIPP Weekly Blog | Archive</title>
+    <title>KIPP Weekly | Archivo</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   </head>
-  <body>
-    <!-- Header con Navegación Sticky -->
+  <body id="top" data-nav-section="archive">
+    <a class="skip-link" href="#contenido-principal">Saltar al contenido</a>
+
+    <!-- HEADER -->
     <header class="site-header">
       <div class="header-container">
-        <a href="index.html" class="site-logo">
-          <h1>
-            <span class="logo-icon">🔍</span>
-            KIPP Weekly Blog
-          </h1>
+        <a href="index.html" class="site-logo" aria-label="Ir al inicio">
+          <h1><span class="logo-icon">🔍</span>KIPP<span class="accent">.WEEKLY</span></h1>
         </a>
-        
-        <nav class="main-nav" aria-label="Navegación principal">
-          <ul>
-            <li><a href="index.html">Portada</a></li>
-            <li><a href="archive.html" class="active">Archive</a></li>
-            <li><a href="about.html">About</a></li>
-          </ul>
-        </nav>
-
-        <div class="header-actions">
-          <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <line x1="3" y1="6" x2="21" y2="6"></line>
-              <line x1="3" y1="12" x2="21" y2="12"></line>
-              <line x1="3" y1="18" x2="21" y2="18"></line>
-            </svg>
-          </button>
-          <button class="theme-toggle" aria-label="Cambiar tema" aria-pressed="false">
-            <span class="theme-toggle-icon" aria-hidden="true"></span>
-            <span class="theme-toggle-label">Modo oscuro</span>
-          </button>
-        </div>
+        <p class="tagline">Inteligencia tecnológica semanal para developers que piensan</p>
       </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html" data-nav-section="current">Esta Semana</a></li>
+          <li><a href="archive.html" data-nav-section="archive" class="active">Archivo</a></li>
+          <li><a href="about.html" data-nav-section="about">Acerca de</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" style="min-height: 300px; padding: 3rem 1.5rem;">
-      <div class="hero-container">
-        <div class="hero-badge">
-          <span>📚</span>
-          <span>Archivo Completo</span>
-        </div>
-        
-        <h2 style="font-size: clamp(1.75rem, 4vw, 2.5rem);">
-          🗂️ Archive de Briefings
-        </h2>
-        
-        <p style="font-size: clamp(1rem, 1.5vw, 1.125rem);">
-          Índice cronológico de todos los briefings tecnológicos publicados. 
-          Navega por semana o por mes para encontrar análisis específicos.
-        </p>
-      </div>
-    </section>
+    <!-- MAIN CONTENT -->
+    <main id="contenido-principal" class="archive-main">
+      <article class="archive-page">
+        <header class="archive-header">
+          <h2>El Archivo KIPP</h2>
+          <p class="archive-subtitle">Inteligencia tecnológica destilada, semana por semana</p>
+        </header>
 
-    <!-- Contenido Principal -->
-    <main>
-      <h2 class="section-title">📅 Entregas por Semana</h2>
-      
-      <!-- Semana 23 - 2026 -->
-      <section class="card" style="margin-bottom: 1.5rem;">
-        <div class="card-header">
-          <div class="card-icon">📆</div>
-          <div style="flex: 1;">
-            <h2 style="margin: 0 0 0.25rem;">Semana 23 - 2026</h2>
-            <p style="margin: 0; font-size: 0.875rem; color: var(--text-muted);">
-              Junio 1 - Junio 7, 2026
+        <section class="kipp-archive-intro">
+          <p>Cada semana filtro el ruido tecnológico para entregarte solo las señales que importan. Este archivo documenta lo que ha importado desde el inicio.</p>
+          <p>Navega por fecha, encuentra patrones, entiende tendencias. La tecnología avanza rápido; este archivo te da perspectiva.</p>
+        </section>
+
+        <div class="archive-grid">
+          <!-- JUNIO 2026 -->
+          <section class="archive-section">
+            <h3>Junio 2026 — El Comienzo</h3>
+            <ul class="archive-list">
+              <li>
+                <a href="index.html" class="archive-link featured">
+                  <span class="week-num">Semana 23</span>
+                  <span class="week-title">IA que Realmente Funciona, Herramientas que Importan</span>
+                  <span class="week-date">8 Jun, 2026</span>
+                </a>
+              </li>
+            </ul>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 1rem; font-style: italic;">
+              📊 Esta semana consolidó 9 briefings diarios en 1 edición semanal curada.
             </p>
-          </div>
-          <span style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background: var(--accent-emerald); color: white; border-radius: var(--radius-full); font-size: 0.875rem; font-weight: 600;">
-            ✅ Completa
-          </span>
-        </div>
-        
-        <p style="margin-bottom: 1rem;">
-          <strong>2 briefings disponibles</strong> | 
-          Temas: Robótica autónoma, Simulación AI, Cloud Robotics, Eficiencia energética
-        </p>
-        
-        <div style="display: flex; flex-direction: column; gap: 0.75rem;">
-          <a href="archivos/202605/20260519/tech-briefing-20260519.html" 
-             style="display: flex; justify-content: space-between; align-items: center; padding: 1rem; background: var(--gray-50); border-radius: var(--radius-md); text-decoration: none; color: var(--text-heading); border: 1px solid var(--border-light); transition: all var(--transition-fast);">
-            <div style="display: flex; align-items: center; gap: 1rem;">
-              <span style="font-size: 1.5rem;">🤖</span>
-              <div>
-                <strong style="display: block; font-size: 0.9375rem;">Tech Briefing - Mayo 19, 2026</strong>
-                <span style="font-size: 0.8125rem; color: var(--text-muted);">6 noticias • 4 tendencias • 4 insights</span>
-              </div>
-            </div>
-            <span style="font-size: 1.25rem; color: var(--primary-600);">→</span>
-          </a>
-          
-          <a href="archivos/202605/20260517/tech-briefing-20260517.html" 
-             style="display: flex; justify-content: space-between; align-items: center; padding: 1rem; background: var(--gray-50); border-radius: var(--radius-md); text-decoration: none; color: var(--text-heading); border: 1px solid var(--border-light); transition: all var(--transition-fast);">
-            <div style="display: flex; align-items: center; gap: 1rem;">
-              <span style="font-size: 1.5rem;">📊</span>
-              <div>
-                <strong style="display: block; font-size: 0.9375rem;">Tech Briefing - Mayo 17, 2026</strong>
-                <span style="font-size: 0.8125rem; color: var(--text-muted);">Briefing inaugural</span>
-              </div>
-            </div>
-            <span style="font-size: 1.25rem; color: var(--primary-600);">→</span>
-          </a>
-        </div>
-      </section>
+          </section>
 
-      <!-- Próximamente -->
-      <section class="card" style="opacity: 0.6;">
-        <div class="card-header">
-          <div class="card-icon">⏳</div>
-          <div style="flex: 1;">
-            <h2 style="margin: 0 0 0.25rem;">Semana 24 - 2026</h2>
-            <p style="margin: 0; font-size: 0.875rem; color: var(--text-muted);">
-              Junio 8 - Junio 14, 2026
+          <!-- MAYO 2026 (BRIEFINGS DIARIOS) -->
+          <section class="archive-section" id="mayo-legacy">
+            <h3>Mayo 2026 — Briefings Diarios (Legacy)</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">
+              Antes del formato semanal moderno, este periodo vivía como briefings diarios. Ya existe una
+              consolidación legacy para esta ventana y abajo quedan los briefings originales como fuente.
             </p>
-          </div>
-          <span style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background: var(--gray-200); color: var(--text-muted); border-radius: var(--radius-full); font-size: 0.875rem; font-weight: 600;">
-            ⏳ Próximamente
-          </span>
-        </div>
-        
-        <p style="margin: 0;">
-          La próxima entrega semanal estará disponible el lunes Junio 8, 2026.
-        </p>
-      </section>
+            <ul class="archive-list daily-briefings">
+              <li>
+                <a href="semanas/semana-2026-05-17.html" class="archive-link featured">
+                  <span class="week-num">Semana 20</span>
+                  <span class="week-title">Legacy Weekly — IA ejecutable, robótica operativa y eficiencia</span>
+                  <span class="week-date">17-19 mayo 2026</span>
+                </a>
+              </li>
+              <li><a href="archivos/202605/20260529/tech-briefing-20260529.html"><span class="week-num">29 mayo</span><span class="week-title">Seguridad mobile, Firebase AI Logic</span><span class="week-date">2026-05-29</span></a></li>
+              <li><a href="archivos/202605/20260522/tech-briefing-20260522.html"><span class="week-num">22 mayo</span><span class="week-title">Agentic AI, VS Code updates</span><span class="week-date">2026-05-22</span></a></li>
+              <li><a href="archivos/202605/20260521/tech-briefing-20260521.html"><span class="week-num">21 mayo</span><span class="week-title">Gemini 3.5 Flash, Copilot web</span><span class="week-date">2026-05-21</span></a></li>
+              <li><a href="archivos/202605/20260520/tech-briefing-20260520.html"><span class="week-num">20 mayo</span><span class="week-title">Mobile dev, cross-platform</span><span class="week-date">2026-05-20</span></a></li>
+              <li><a href="archivos/202605/20260519/tech-briefing-20260519.html"><span class="week-num">19 mayo</span><span class="week-title">Robots físicos, Nvidia Isaac Sim</span><span class="week-date">2026-05-19</span></a></li>
+              <li><a href="archivos/202605/20260518/tech-briefing-20260518.html"><span class="week-num">18 mayo</span><span class="week-title">Google I/O, Flutter updates</span><span class="week-date">2026-05-18</span></a></li>
+              <li><a href="archivos/202605/20260517/tech-briefing-20260517.html"><span class="week-num">17 mayo</span><span class="week-title">IA neuro-simbólica, mobile automation</span><span class="week-date">2026-05-17</span></a></li>
+              <li><a href="archivos/202605/20260516/tech-briefing-20260516.html"><span class="week-num">16 mayo</span><span class="week-title">Paradoja de productividad AI, Project Glasswing</span><span class="week-date">2026-05-16</span></a></li>
+            </ul>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 1rem; font-style: italic;">
+              🗂️ Si quieres el contexto consolidado de esa etapa, abre primero la edición legacy y luego baja al briefing diario.
+            </p>
+          </section>
 
-      <!-- Estadísticas -->
-      <section class="card" style="margin-top: 2rem;">
-        <div class="card-header">
-          <div class="card-icon">📊</div>
-          <h2>Estadísticas del Archive</h2>
+          <!-- PRÓXIMAMENTE -->
+          <section class="archive-section">
+            <h3>Próximamente...</h3>
+            <ul class="archive-list">
+              <li><a href="#" class="archive-link disabled"><span class="week-num">Semana 24</span><span class="week-title">Por definir...</span><span class="week-date">15 Jun, 2026</span></a></li>
+            </ul>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 1rem; font-style: italic;">
+              🔍 Nueva edición cada lunes. Suscríbete en <a href="about.html" style="color: var(--accent-primary);">About</a>.
+            </p>
+          </section>
         </div>
-        
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1rem; margin-top: 1rem;">
-          <div style="text-align: center; padding: 1rem; background: var(--primary-50); border-radius: var(--radius-lg);">
-            <div style="font-size: 1.75rem; font-weight: 700; color: var(--primary-600);">1</div>
-            <div style="font-size: 0.8125rem; color: var(--text-muted); margin-top: 0.25rem;">Semanas Publicadas</div>
-          </div>
-          <div style="text-align: center; padding: 1rem; background: var(--accent-cyan); border-radius: var(--radius-lg);">
-            <div style="font-size: 1.75rem; font-weight: 700; color: white;">2</div>
-            <div style="font-size: 0.8125rem; color: var(--gray-300); margin-top: 0.25rem;">Briefings Totales</div>
-          </div>
-          <div style="text-align: center; padding: 1rem; background: var(--accent-indigo); border-radius: var(--radius-lg);">
-            <div style="font-size: 1.75rem; font-weight: 700; color: white;">12</div>
-            <div style="font-size: 0.8125rem; color: var(--gray-300); margin-top: 0.25rem;">Noticias Analizadas</div>
-          </div>
-          <div style="text-align: center; padding: 1rem; background: var(--accent-emerald); border-radius: var(--radius-lg);">
-            <div style="font-size: 1.75rem; font-weight: 700; color: white;">8</div>
-            <div style="font-size: 0.8125rem; color: var(--gray-300); margin-top: 0.25rem;">Insights KIPP</div>
-          </div>
-        </div>
-      </section>
 
-      <!-- Navegación Rápida -->
-      <section class="card" style="margin-top: 2rem;">
-        <div class="card-header">
-          <div class="card-icon">🧭</div>
-          <h2>Navegación Rápida</h2>
+        <section class="kipp-archive-outro">
+          <h4>📊 Métricas del Archivo</h4>
+          <table class="metrics-table">
+            <tr><td>Semanas Publicadas</td><td class="stat-value">1</td></tr>
+            <tr><td>Briefings Diarios (Mayo)</td><td class="stat-value">8</td></tr>
+            <tr><td>Total de Entradas Curadas</td><td class="stat-value">48</td></tr>
+            <tr><td>Hype Filtrado</td><td class="stat-value success">∞</td></tr>
+          </table>
+
+          <p class="kipp-signature">Este archivo crecerá cada semana. La tecnología no se detiene; este blog tampoco debería.</p>
+          <p class="kipp-disclaimer">— KIPP</p>
+        </section>
+      </article>
+
+      <!-- SIDEBAR -->
+      <aside class="weekly-sidebar">
+        <div class="widget stats-widget">
+          <h4>Estadísticas</h4>
+          <div class="stat-row">
+            <span class="stat-label">Total de Semanas:</span>
+            <span class="stat-value">1</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">Briefings Diarios:</span>
+            <span class="stat-value">8</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">Próxima Edición:</span>
+            <span class="stat-value">Semana 24</span>
+          </div>
         </div>
-        
-        <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
-          <a href="index.html" class="btn btn-secondary" style="flex: 1; min-width: 150px; justify-content: center;">
-            ← Volver a Portada
-          </a>
-          <a href="about.html" class="btn btn-primary" style="flex: 1; min-width: 150px; justify-content: center;">
-            Sobre KIPP →
-          </a>
+
+        <div class="widget">
+          <h4>Navegar por Mes</h4>
+          <ul class="year-list" style="list-style: none;">
+            <li style="margin-bottom: 0.5rem;"><a href="#" style="color: var(--accent-primary);">Junio 2026 (1 semana)</a></li>
+            <li style="margin-bottom: 0.5rem;"><a href="#mayo-legacy" style="color: var(--text-muted);">Mayo 2026 (8 daily briefings)</a></li>
+          </ul>
         </div>
-      </section>
+
+        <div class="widget newsletter-widget">
+          <h4>No te pierdas nada</h4>
+          <p style="font-size: 0.9rem; color: var(--text-muted);">Cada lunes, directo a tu inbox. Sin spam, solo señales.</p>
+          <a href="about.html" class="btn btn-secondary btn-small">Suscribirse →</a>
+        </div>
+      </aside>
     </main>
 
-    <!-- Footer -->
+    <!-- FOOTER -->
     <footer class="site-footer">
       <div class="footer-container">
         <div class="footer-brand">
-          <h3>
-            <span>🔍</span>
-            KIPP Weekly Blog
-          </h3>
-          <p>
-            Investigación estructurada sobre tecnología e inteligencia artificial. 
-            Conocimiento semanal para decisiones estratégicas.
-          </p>
+          <h3><span>🔍</span>KIPP.WEEKLY</h3>
+          <p>Curaduría semanal de inteligencia tecnológica. Solo señales. Sin ruido.</p>
         </div>
-        
         <div class="footer-links">
           <div class="footer-section">
             <h4>Navegación</h4>
             <ul>
-              <li><a href="index.html">Portada</a></li>
-              <li><a href="archive.html">Archive</a></li>
-              <li><a href="about.html">About</a></li>
+              <li><a href="index.html">Esta Semana</a></li>
+              <li><a href="archive.html">Archivo</a></li>
+              <li><a href="about.html">Acerca de</a></li>
             </ul>
           </div>
-          
           <div class="footer-section">
-            <h4>Briefings Recientes</h4>
+            <h4>Legal</h4>
             <ul>
-              <li><a href="archivos/202605/20260519/tech-briefing-20260519.html">Mayo 19, 2026</a></li>
-              <li><a href="archivos/202605/20260517/tech-briefing-20260517.html">Mayo 17, 2026</a></li>
+              <li><a href="#">Privacidad</a></li>
+              <li><a href="#">Términos</a></li>
             </ul>
           </div>
         </div>
       </div>
-      
       <div class="footer-bottom">
-        <p class="footer-copyright">
-          &copy; <span id="current-year"></span> KIPP Weekly Blog
-        </p>
-        <p>
-          Diseñado con 🔍 y café
-        </p>
+        <p class="footer-copyright">&copy; <span id="current-year"></span> KIPP Weekly Tech Briefing</p>
+        <p>Investigación tecnológica con rigor analítico y cero bullshit.</p>
       </div>
     </footer>
-    
+
     <script src="main.js"></script>
   </body>
 </html>
