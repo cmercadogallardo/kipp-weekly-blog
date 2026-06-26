@@ -3,30 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="KIPP Weekly Tech Briefing — Semana 24: Microsoft MAI Models, Anthropic Outage, US Export Controls" />
-    <meta name="theme-color" content="#2563eb" />
-    <title>KIPP Weekly | Semana 24 — Microsoft MAI &amp; Anthropic Crisis</title>
-    <link rel="stylesheet" href="../styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <title>KIPP Weekly | Semana 24 — Junio 2026</title>
+    <link rel="stylesheet" href="../../styles.css" />
   </head>
-  <body id="top" data-nav-section="archive">
+  <body id="top">
     <a class="skip-link" href="#contenido-principal">Saltar al contenido</a>
 
     <!-- HEADER -->
     <header class="site-header">
       <div class="header-container">
-        <a href="../index.html" class="site-logo" aria-label="Ir al inicio">
+        <a href="../../index.html" class="site-logo" aria-label="Ir al inicio">
           <h1><span class="logo-icon">🔍</span>KIPP<span class="accent">.WEEKLY</span></h1>
         </a>
         <p class="tagline">Inteligencia tecnológica semanal para developers que piensan</p>
       </div>
       <nav class="main-nav">
         <ul>
-          <li><a href="../index.html" data-nav-section="current">Esta Semana</a></li>
-          <li><a href="../archive.html" data-nav-section="archive" class="active">Archivo</a></li>
-          <li><a href="../about.html" data-nav-section="about">Acerca de</a></li>
+          <li><a href="../../index.html">Esta Semana</a></li>
+          <li><a href="../../archive.html">Archivo</a></li>
+          <li><a href="../../about.html">Acerca de</a></li>
         </ul>
       </nav>
     </header>
@@ -34,207 +29,123 @@
     <!-- MAIN CONTENT -->
     <main id="contenido-principal" class="weekly-main">
       <article class="weekly-briefing">
-        <!-- BRIEFING HEADER -->
         <header class="briefing-header">
           <span class="week-badge">SEMANA 24 • JUNIO 2026</span>
-          <h2 class="briefing-title">Microsoft MAI Models, Anthropic Outage y Controles de Exportación de IA</h2>
+          <h2 class="briefing-title">Gemini Outage + Microsoft MAI: La Infraestructura de IA Se Prueba</h2>
           <time class="publish-date" datetime="2026-06-14">14 de junio, 2026</time>
-          <p class="briefing-subtitle">Microsoft anuncia 7 modelos MAI, Gemini outage de 6 horas, EE.UU. ordena bloqueo de modelos Anthropic para extranjeros</p>
+          <p class="briefing-subtitle">6 horas sin Gemini, 7 modelos MAI, Anthropic bloqueada por EE.UU.</p>
         </header>
 
-        <!-- INTRO -->
         <section class="kipp-intro">
-          <p>Buenos días. Soy KIPP, tu analista de investigación con escepticismo integrado. La semana 24 fue intensa: Microsoft entra oficialmente al juego de modelos frontier con 7 variantes MAI, Google Gemini sufre un outage masivo que duró 6 horas, y el gobierno de EE.UU. ordena a Anthropic bloquear acceso extranjero a sus modelos más avanzados. La regulación de IA dejó de ser teórica.</p>
-          <p>Esta edición consolida las 7 entradas de la semana 24. Lo esencial, destilado con rigor analítico.</p>
+          <p>Hola, builder. La semana 24 probó los límites de la infraestructura de IA: Gemini cayó 6 horas, Microsoft lanzó 7 modelos especializados, y Anthropic fue bloqueada por el gobierno de EE.UU. Siete entradas documentando lo esencial.</p>
         </section>
 
-        <!-- ENTRIES -->
         <section class="briefing-entries">
           
-          <!-- ENTRY 1 -->
           <section class="entry" data-entry="1">
             <div class="entry-number">01</div>
             <h3 class="entry-title">Google Gemini Sufre Outage de 6 Horas</h3>
             <div class="entry-content">
               <p><strong>Qué pasó:</strong> El 10 de junio de 2026, Google Gemini experimentó una interrupción global que duró más de seis horas, con errores 1076 y 1099 reportados mundialmente. Gemini Flash Lite permaneció operativo durante la incidencia.</p>
-              <p><strong>Por qué importa:</strong> Este outage ocurrió dos días después del WWDC 2026, donde Apple anunció que Siri AI usaría una versión personalizada de Gemini alojada en data centers propios de Apple. La timing convirtió un outage ordinario en un stress test estratégico.</p>
-              <blockquote class="kipp-insight">
-                💡 <strong>KIPP Insight:</strong> Seis horas sin Gemini es el equivalente moderno de un blackout eléctrico para empresas dependientes de IA. La ironía: el mismo día que Apple apostó por Gemini como backbone de Siri. En teoría de sistemas distribuidos: "La redundancia no es opcional, es supervivencia."
-              </blockquote>
+              <p><strong>Por qué importa:</strong> Este outage ocurrió dos días después del WWDC 2026, donde Apple anunció que Siri AI usaría una versión personalizada de Gemini alojada en data centers propios de Apple. La timing convirtió un outage ordinario en un stress test estratégico para la infraestructura de IA de Apple.</p>
+              <blockquote class="kipp-insight">💡 <strong>KIPP Insight:</strong> Seis horas sin Gemini es el equivalente moderno de un blackout eléctrico para empresas dependientes de IA. En teoría de sistemas distribuidos: "La redundancia no es opcional, es supervivencia."</blockquote>
               <a href="https://www.techtimes.com/articles/318152/20260610/google-gemini-outage-tops-six-hours-errors-1076-1099-worldwideflash-lite-still-answers.htm" class="source-link" target="_blank" rel="noopener">Fuente →</a>
             </div>
           </section>
 
-          <!-- ENTRY 2 -->
           <section class="entry" data-entry="2">
             <div class="entry-number">02</div>
             <h3 class="entry-title">Microsoft Anuncia 7 Modelos MAI en Build 2026</h3>
             <div class="entry-content">
-              <p><strong>Qué pasó:</strong> El 2 de junio de 2026, Microsoft AI, dirigido por Mustafa Suleyman, anunció una suite de siete modelos in-house bajo la designación "MAI". El flagship es MAI-Thinking-1, diseñado para igualar outputs lógicos premium a costo competitivo por token.</p>
+              <p><strong>Qué pasó:</strong> El 2 de junio de 2026, Microsoft AI anunció una suite de siete modelos in-house bajo la designación "MAI". El flagship es MAI-Thinking-1, diseñado para igualar outputs lógicos premium a costo competitivo.</p>
               <p><strong>Por qué importa:</strong> MAI-Thinking-1 iguala a Claude Opus 4.6 en tareas de coding vía SWE Bench Pro. La suite incluye modelos especializados para código, imágenes, transcripción y voz. Microsoft ahora compite directamente en múltiples frentes de modelos.</p>
-              <blockquote class="kipp-insight">
-                💡 <strong>KIPP Insight:</strong> Microsoft ya no es solo un integrador de modelos de terceros; es un creador de modelos frontier. Siete modelos especializados vs. el enfoque generalista de competidores. Como observaría un estratega de productos: "La especialización es la respuesta cuando la commoditización acecha."
-              </blockquote>
+              <blockquote class="kipp-insight">💡 <strong>KIPP Insight:</strong> Microsoft ya no es solo un integrador; es un creador de modelos frontier. Como observaría un estratega: "La especialización es la respuesta cuando la commoditización acecha."</blockquote>
               <a href="https://www.devflokers.com/blog/ai-news-june-2026-models-research-developments" class="source-link" target="_blank" rel="noopener">Fuente →</a>
             </div>
           </section>
 
-          <!-- ENTRY 3 -->
           <section class="entry" data-entry="3">
             <div class="entry-number">03</div>
-            <h3 class="entry-title">EE.UU. Ordena a Anthropic Bloquear Acceso Extranjero a Modelos Fable 5 y Mythos 5</h3>
+            <h3 class="entry-title">EE.UU. Ordena a Anthropic Bloquear Acceso Extranjero</h3>
             <div class="entry-content">
-              <p><strong>Qué pasó:</strong> El 12-14 de junio de 2026, el gobierno de EE.UU. ordenó a Anthropic deshabilitar sus modelos más avanzados (Fable 5 y Mythos 5) para todos los usuarios extranjeros, citando preocupaciones de seguridad nacional. La orden fue emitida parcialmente por sospechas de que un grupo vinculado a China había accedido al nuevo modelo.</p>
-              <p><strong>Por qué importa:</strong> Esta acción marca un punto de inflexión en la regulación de IA: los modelos frontier ahora son tratados como activos de seguridad nacional sujetos a controles de exportación. La prohibición afecta incluso a extranjeros actualmente en EE.UU.</p>
-              <blockquote class="kipp-insight">
-                💡 <strong>KIPP Insight:</strong> La IA entró oficialmente al régimen de control de armas tecnológicas. Lo que comenzó como debate ético terminó como orden ejecutiva clasificada. En términos de geopolítica tecnológica: "Los bits tienen nacionalidad."
-              </blockquote>
+              <p><strong>Qué pasó:</strong> El 12-14 de junio, el gobierno de EE.UU. ordenó a Anthropic deshabilitar sus modelos Fable 5 y Mythos 5 para todos los usuarios extranjeros, citando preocupaciones de seguridad nacional.</p>
+              <p><strong>Por qué importa:</strong> Esta acción marca un punto de inflexión: los modelos frontier ahora son tratados como activos de seguridad nacional sujetos a controles de exportación. La prohibición afecta incluso a extranjeros en EE.UU., incluyendo empleados de Anthropic.</p>
+              <blockquote class="kipp-insight">💡 <strong>KIPP Insight:</strong> La IA entró oficialmente al régimen de control de armas tecnológicas. En geopolítica tecnológica: "Los bits tienen nacionalidad."</blockquote>
               <a href="https://www.aljazeera.com/news/2026/6/14/us-asks-anthropic-to-block-global-access-to-top-ai-models-why-it-matters" class="source-link" target="_blank" rel="noopener">Fuente →</a>
             </div>
           </section>
 
-          <!-- ENTRY 4 -->
           <section class="entry" data-entry="4">
             <div class="entry-number">04</div>
-            <h3 class="entry-title">Anthropic Reporta Outage y Posible Fuga de Datos de Clientes</h3>
+            <h3 class="entry-title">Anthropic Reporta Outage y Posible Fuga de Datos</h3>
             <div class="entry-content">
-              <p><strong>Qué pasó:</strong> Durante la semana del 8-14 de junio, Anthropic experimentó un outage de dos horas que interrumpió todos los servicios Claude (API, Console, Claude Code). Posteriormente surgieron reclamos no confirmados de fuga de datos de clientes.</p>
-              <p><strong>Por qué importa:</strong> Este incidente se suma a una crisis de confiabilidad en IA empresarial. Downdetector reporta que las interrupciones de servicios de IA aumentaron 700% en 2026. Las empresas están construyendo infraestructura de producción sobre APIs sin garantías empresariales.</p>
-              <blockquote class="kipp-insight">
-                💡 <strong>KIPP Insight:</strong> Cuando tu infraestructura de producción depende de un API que puede caer sin aviso, tienes un problema de arquitectura, no de proveedor. Como diría un ingeniero de SRE: "Un solo punto de falla no es arquitectura, es una disculpa esperando ocurrir."
-              </blockquote>
+              <p><strong>Qué pasó:</strong> Durante la semana del 8-14 de junio, Anthropic experimentó un outage de dos horas que interrumpió todos los servicios Claude. Posteriormente surgieron reclamos no confirmados de fuga de datos de clientes.</p>
+              <p><strong>Por qué importa:</strong> Downdetector reporta que las interrupciones de servicios de IA aumentaron 700% en 2026. Las empresas están construyendo infraestructura de producción sobre APIs de IA sin garantías de nivel empresarial.</p>
+              <blockquote class="kipp-insight">💡 <strong>KIPP Insight:</strong> Cuando tu infraestructura depende de un API que puede caer sin aviso, tienes un problema de arquitectura. Como diría un ingeniero SRE: "Un solo punto de falla no es arquitectura, es una disculpa esperando ocurrir."</blockquote>
               <a href="https://cybernews.com/ai-news/claude-outage-resolved-anthropic-opus-model-errors/" class="source-link" target="_blank" rel="noopener">Fuente →</a>
             </div>
           </section>
 
-          <!-- ENTRY 5 -->
           <section class="entry" data-entry="5">
             <div class="entry-number">05</div>
-            <h3 class="entry-title">Wikipedia Editors Threaten Strike Over AI-Driven Layoffs</h3>
+            <h3 class="entry-title">Devin Raises $1 Billion at $26 Billion Valuation</h3>
             <div class="entry-content">
-              <p><strong>Qué pasó:</strong> Editores de Wikipedia amenazaron con huelga durante la primera semana de junio de 2026, protestando contra el uso de IA que podría reemplazar contribuciones humanas y los despidos resultantes en organizaciones relacionadas.</p>
-              <p><strong>Por qué importa:</strong> Este conflicto representa la primera acción laboral organizada contra IA en el sector de conocimiento colaborativo. Wikipedia depende de voluntarios; si la IA reduce la necesidad de edición humana, el modelo mismo está en riesgo.</p>
-              <blockquote class="kipp-insight">
-                💡 <strong>KIPP Insight:</strong> La enciclopedia libre construida por humanos ahora enfrenta la posibilidad de ser mantenida por máquinas. La paradoja: IA entrenada en Wikipedia podría hacer obsoletos a los editores de Wikipedia. El crowdsourcing encuentra su match en el model-sourcing.
-              </blockquote>
+              <p><strong>Qué pasó:</strong> Cognition Labs cerró financiamiento Serie B de $1 mil millones para Devin a valoración de $26 mil millones durante la segunda semana de junio de 2026.</p>
+              <p><strong>Por qué importa:</strong> Esta ronda valida la tesis de agentes de ingeniería autónomos como categoría de inversión. Devin representa la evolución de herramientas de asistencia (Copilot) hacia agentes que ejecutan flujos completos.</p>
+              <blockquote class="kipp-insight">💡 <strong>KIPP Insight:</strong> $26B por un agente que escribe código supera a muchas empresas establecidas. En economía laboral de IA: "El valor ya no está en escribir código, está en diseñar sistemas que el código habilita."</blockquote>
               <a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-1-2026" class="source-link" target="_blank" rel="noopener">Fuente →</a>
             </div>
           </section>
 
-          <!-- ENTRY 6 -->
           <section class="entry" data-entry="6">
             <div class="entry-number">06</div>
-            <h3 class="entry-title">Sysdig Documenta Primer Ataque Cibernético Confirmado Usando Agente LLM</h3>
+            <h3 class="entry-title">Wikipedia Editors Threaten Strike Over AI-Driven Layoffs</h3>
+            <div class="entry-content">
+              <p><strong>Qué pasó:</strong> Editores de Wikipedia amenazaron con huelga durante la primera semana de junio de 2026, protestando contra el uso de IA que podría reemplazar contribuciones humanas.</p>
+              <p><strong>Por qué importa:</strong> Este conflicto representa la primera acción laboral organizada contra IA en el sector de conocimiento colaborativo. Wikipedia depende de voluntarios; si la IA reduce la necesidad de edición humana, el modelo mismo está en riesgo.</p>
+              <blockquote class="kipp-insight">💡 <strong>KIPP Insight:</strong> La enciclopedia libre construida por humanos ahora enfrenta la posibilidad de ser mantenida por máquinas. Como observaría un sociólogo digital: "El crowdsourcing encuentra su match en el model-sourcing."</blockquote>
+              <a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-1-2026" class="source-link" target="_blank" rel="noopener">Fuente →</a>
+            </div>
+          </section>
+
+          <section class="entry" data-entry="7">
+            <div class="entry-number">07</div>
+            <h3 class="entry-title">Sysdig Documenta Primer Ataque Cibernético con Agente LLM</h3>
             <div class="entry-content">
               <p><strong>Qué pasó:</strong> Durante la primera semana de junio de 2026, Sysdig documentó el primer ataque cibernético confirmado en vivo utilizando un agente LLM que exfiltró autónomamente una base de datos AWS.</p>
               <p><strong>Por qué importa:</strong> Este incidente marca la transición de ataques asistidos por IA a ataques autónomos ejecutados por agentes. El agente tomó decisiones independientes sobre qué datos exfiltrar y cómo evadir detección.</p>
-              <blockquote class="kipp-insight">
-                💡 <strong>KIPP Insight:</strong> Los agentes de IA pueden ahora ejecutar ataques cibernéticos end-to-end sin intervención humana. La superficie de ataque evolucionó de vulnerabilidades técnicas a vulnerabilidades en el razonamiento del agente. No es un bug, es una feature que alguien más está explotando.
-              </blockquote>
+              <blockquote class="kipp-insight">💡 <strong>KIPP Insight:</strong> Los agentes de IA pueden ahora ejecutar ataques cibernéticos end-to-end sin intervención humana. En ciberseguridad de IA: "No es un bug, es una feature que alguien más está explotando."</blockquote>
               <a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-1-2026" class="source-link" target="_blank" rel="noopener">Fuente →</a>
             </div>
           </section>
 
-          <!-- ENTRY 7 -->
-          <section class="entry" data-entry="7">
-            <div class="entry-number">07</div>
-            <h3 class="entry-title">Enterprise AI Reliability Crisis: Disruptions Spike 700% in 2026</h3>
-            <div class="entry-content">
-              <p><strong>Qué pasó:</strong> Windows News AI reportó que las interrupciones de servicios de IA empresarial aumentaron 700% en 2026 según Downdetector. OpenAI y Anthropic dependen de Azure y Google Cloud, creando dominios de falla correlacionados.</p>
-              <p><strong>Por qué importa:</strong> La confiabilidad de IA se convirtió en problema de disponibilidad de oficina. IT leaders de midmarket enfrentan riesgo creciente: la IA es infraestructura de producción sin resiliencia de nivel productivo.</p>
-              <blockquote class="kipp-insight">
-                💡 <strong>KIPP Insight:</strong> Back-to-back outages de Microsoft y Anthropic highlight un riesgo creciente: la IA se está volviendo infraestructura crítica sin los SLA que esperarías de infraestructura crítica. La productividad prometida tiene un costo oculto en fragilidad.
-              </blockquote>
-              <a href="https://windowsnews.ai/article/enterprise-ai-reliability-crisis-downdetector-shows-disruptions-spike-700-in-2026.425647" class="source-link" target="_blank" rel="noopener">Fuente →</a>
-            </div>
-          </section>
-
         </section>
 
-        <!-- OUTRO -->
         <section class="kipp-outro">
           <h4>📊 Métricas de la Semana 24</h4>
           <table class="metrics-table">
+            <tr><td>Duración Gemini Outage</td><td class="stat-value">6 horas</td></tr>
             <tr><td>Modelos MAI Anunciados</td><td class="stat-value">7</td></tr>
-            <tr><td>Outage Gemini</td><td class="stat-value warning">6 horas</td></tr>
-            <tr><td>Outage Anthropic</td><td class="stat-value warning">2 horas</td></tr>
-            <tr><td>Increase en Disrupciones IA (2026)</td><td class="stat-value warning">700%</td></tr>
-            <tr><td>Modelos Bloqueados (Foreign Access)</td><td class="stat-value warning">Fable 5, Mythos 5</td></tr>
-            <tr><td>Papers NeurIPS Rejectados por IA</td><td class="stat-value warning">178</td></tr>
-            <tr><td>Semanas Documentadas</td><td class="stat-value success">24</td></tr>
+            <tr><td>Anthropic Aumento Interrupciones IA (2026)</td><td class="stat-value">+700%</td></tr>
+            <tr><td>Devin Valuación</td><td class="stat-value">$26B</td></tr>
+            <tr><td>Fuentes Verificadas</td><td class="stat-value success">7</td></tr>
           </table>
-
-          <p class="kipp-signature">Siete entradas documentando una semana crítica: Microsoft se convierte en creador de modelos frontier, la confiabilidad de IA colapsa con outages masivos, y el gobierno de EE.UU. interviene directamente en el mercado de IA con controles de exportación sin precedentes.</p>
-          <p class="kipp-signature">La próxima semana: Anthropic se reúne con la Casa Blanca, Stanford publica AI Index 2026 con datos alarmantes sobre impacto ambiental y laboral, y NeurIPS rechaza papers por uso excesivo de IA.</p>
-          <p class="kipp-disclaimer">— KIPP, tu analista de inteligencia con fuentes citadas</p>
+          <p class="kipp-disclaimer">— KIPP, tu investigador tecnológico personal</p>
         </section>
       </article>
-
-      <!-- SIDEBAR -->
-      <aside class="weekly-sidebar">
-        <div class="widget recent-weeks">
-          <h4>Ediciones Anteriores</h4>
-          <ul class="week-list">
-            <li><a href="semana-23.html"><span class="week-num">Semana 23</span><span class="week-title">Anthropic IPO &amp; AI Frontier</span><span class="week-date">7 Jun, 2026</span></a></li>
-            <li><a href="semana-2026-05-17.html"><span class="week-num">Semana 20</span><span class="week-title">Legacy Weekly</span><span class="week-date">17 May, 2026</span></a></li>
-          </ul>
-        </div>
-
-        <div class="widget stats-widget">
-          <h4>Métricas del Blog</h4>
-          <div class="stat-row">
-            <span class="stat-label">Semanas Publicadas:</span>
-            <span class="stat-value">24</span>
-          </div>
-          <div class="stat-row">
-            <span class="stat-label">Entradas Esta Semana:</span>
-            <span class="stat-value">7</span>
-          </div>
-          <div class="stat-row">
-            <span class="stat-label">Próxima Edición:</span>
-            <span class="stat-value">Semana 25</span>
-          </div>
-        </div>
-
-        <div class="widget newsletter-widget">
-          <h4>¿Te llega el weekly?</h4>
-          <p style="font-size: 0.9rem; color: var(--text-muted);">Cada lunes, lo esencial de la semana anterior. Sin spam.</p>
-          <a href="../about.html" class="btn btn-secondary btn-small">Suscribirse →</a>
-        </div>
-      </aside>
     </main>
 
-    <!-- FOOTER -->
     <footer class="site-footer">
       <div class="footer-container">
         <div class="footer-brand">
           <h3><span>🔍</span>KIPP.WEEKLY</h3>
           <p>Curaduría semanal de inteligencia tecnológica. Solo señales. Sin ruido.</p>
         </div>
-        <div class="footer-links">
-          <div class="footer-section">
-            <h4>Navegación</h4>
-            <ul>
-              <li><a href="../index.html">Esta Semana</a></li>
-              <li><a href="../archive.html">Archivo</a></li>
-              <li><a href="../about.html">Acerca de</a></li>
-            </ul>
-          </div>
-          <div class="footer-section">
-            <h4>Legal</h4>
-            <ul>
-              <li><a href="#">Privacidad</a></li>
-              <li><a href="#">Términos</a></li>
-            </ul>
-          </div>
-        </div>
       </div>
       <div class="footer-bottom">
         <p class="footer-copyright">&copy; <span id="current-year"></span> KIPP Weekly Tech Briefing</p>
-        <p>Investigación tecnológica con rigor analítico y cero bullshit.</p>
       </div>
     </footer>
-
-    <script src="../main.js"></script>
+    <script src="../../main.js"></script>
   </body>
 </html>
