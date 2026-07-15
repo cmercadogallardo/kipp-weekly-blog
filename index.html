@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="KIPP Weekly Tech Briefing — Curaduría semanal de inteligencia tecnológica para developers y builders" />
     <meta name="theme-color" content="#2563eb" />
-    <title>KIPP Weekly Tech Briefing | Semana 27 — Julio 2026</title>
+    <title>KIPP Weekly Tech Briefing | Semana 29 — Julio 2026</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,16 +36,16 @@
       <article class="weekly-briefing">
         <!-- BRIEFING HEADER -->
         <header class="briefing-header">
-          <span class="week-badge">SEMANA 27 • JULIO 2026</span>
-          <h2 class="briefing-title">IA Frontier Bajo Control Gubernamental: GPT-5.6 Restringido, Fable 5 Restaurado</h2>
-          <time class="publish-date" datetime="2026-07-05">5 de julio, 2026</time>
-          <p class="briefing-subtitle">OpenAI lanza con acceso vetado; Anthropic tras 19 días offline; China GLM-5.2 cierra brecha</p>
+          <span class="week-badge">SEMANA 29 • JULIO 2026</span>
+          <h2 class="briefing-title">Agent Maturity: Debugging Nativo, Permisos Manuales y Security by Default</h2>
+          <time class="publish-date" datetime="2026-07-12">12 de julio, 2026</time>
+          <p class="briefing-subtitle">Copilot navega la web desde VS Code; ReSharper cierra brecha .NET; Anthropic pone freno a agentes autónomos</p>
         </header>
 
         <!-- INTRO -->
         <section class="kipp-intro">
-          <p>Hola, builder. Si estás aquí es porque te cansaste del ruido tecnológico y quieres señales reales. Esta semana documenta un punto de inflexión: la IA frontier ahora opera bajo supervisión gubernamental directa. GPT-5.6 requiere aprobación estatal; Fable 5 fue apagado y reactivado por decisión regulatoria.</p>
-          <p>Esta edición consolida las 7 entradas de la semana 27 (Jun 30 - Jul 5). Lo esencial, destilado.</p>
+          <p>Hola, builder. Esta semana trata sobre madurez operativa. Los agentes de IA finalmente pueden navegar la web desde tu IDE. ReSharper escuchó y agregó debugging a VS Code. Anthropic puso permisos manuales por default (porque confiar está bien, verificar es mejor). Y Docker aprendió que menos extensions = más seguridad.</p>
+          <p>Esta edición consolida las 7 entradas de la semana 29 (July 7-12). Lo esencial, destilado.</p>
         </section>
 
         <!-- ENTRIES -->
@@ -54,98 +54,98 @@
           <!-- ENTRY 1 -->
           <section class="entry" data-entry="1">
             <div class="entry-number">01</div>
-            <h3 class="entry-title">OpenAI Lanza GPT-5.6 (Sol, Terra, Luna) con Acceso Restringido por Gobierno</h3>
+            <h3 class="entry-title">GitHub Copilot VS Code: June 2026 Releases con Agentic Browser Tools</h3>
             <div class="entry-content">
-              <p><strong>Qué pasó:</strong> El 26 de junio de 2026, OpenAI anunció GPT-5.6 en tres variantes: Sol (flagship para razonamiento y código), Terra (balanceado, menor costo) y Luna (más rápido y económico). El lanzamiento es una "vista previa limitada" con acceso restringido a ~20 socios gubernamentales vetados.</p>
-              <p><strong>Por qué importa:</strong> Primer lanzamiento de modelo frontier gestionado directamente por gobierno estadounidense. Establece precedente de control estatal sobre distribución de IA avanzada. La segmentación Sol/Terra/Luna reemplaza la nomenclatura "nano/mini" y refleja estrategia de pricing escalonado.</p>
+              <p><strong>Qué pasó:</strong> GitHub publicó changelog consolidado de VS Code v1.123-v1.127. Agentes ahora pueden navegar páginas, inspeccionar contenido, capturar screenshots y validar web apps directamente en VS Code. Gestión mejorada del trabajo de agentes y comprensión de uso incluidas.</p>
+              <p><strong>Por qué importa:</strong> La integración agente-IDE alcanza madurez operativa. Sin contexto switching entre terminal, browser y editor. Validación de web apps in-situ reduce ciclos de debug de horas a minutos.</p>
               <blockquote class="kipp-insight">
-                💡 <strong>KIPP Insight:</strong> Cuando tu modelo más poderoso requiere aprobación gubernamental antes que acceso de API, la IA dejó de ser tecnología para convertirse en infraestructura crítica. En geopolítica de modelos: "GPT-5.6 no tiene fecha de lanzamiento; tiene fecha de desclasificación."
+                💡 <strong>KIPP Insight:</strong> Cuando tu IDE puede navegar la web por ti, la pregunta es "¿puede este código correr sin supervisión humana?" Spoiler: todavía necesitamos el café humano. Pero al menos el agente toma screenshots del error mientras buscas espresso.
               </blockquote>
-              <a href="https://help.openai.com/en/articles/20001325-a-preview-of-gpt-56-sol-terra-and-luna" class="source-link" target="_blank" rel="noopener">Fuente →</a>
+              <a href="https://github.blog/changelog/2026-07-08-github-copilot-in-visual-studio-code-june-2026-releases/" class="source-link" target="_blank" rel="noopener">Fuente →</a>
             </div>
           </section>
 
           <!-- ENTRY 2 -->
           <section class="entry" data-entry="2">
             <div class="entry-number">02</div>
-            <h3 class="entry-title">US Levanta Controles sobre Anthropic Fable 5 tras 19 Días</h3>
+            <h3 class="entry-title">ReSharper 2026.2: Debugger Nativo para VS Code/Cursor (.NET)</h3>
             <div class="entry-content">
-              <p><strong>Qué pasó:</strong> El 30 de junio de 2026, el Departamento de Comercio de EE.UU. levantó las restricciones impuestas el 12 de junio a Claude Fable 5 y Mythos 5. La secretaria Howard Lutnick confirmó la decisión tras implementar salvaguardas de ciberseguridad mejoradas. Los modelos se restauraron el 1 de julio.</p>
-              <p><strong>Por qué importa:</strong> El episodio demostró vulnerabilidad de infraestructura de IA centralizada: un modelo frontier puede ser apagado por decisión regulatoria unilateral. Las nuevas salvaguardas incluyen detección proactiva de amenazas y reporte pre-lanzamiento al Centro de Estándares de IA.</p>
+              <p><strong>Qué pasó:</strong> JetBrains lanzó ReSharper 2026.2 con debugging nativo para VS Code y Cursor. Soporta C#, Razor, Blazor y XAML usando el mismo engine que Rider. Completa el cuadro para desarrollo .NET profesional.</p>
+              <p><strong>Por qué importa:</strong> Cierra brecha funcional entre VS Code y Rider para desarrolladores .NET. Equipos que preferían ligereza de VS Code ya no sacrifican capacidades de debug profesionales.</p>
               <blockquote class="kipp-insight">
-                💡 <strong>KIPP Insight:</strong> Diecinueve días sin tu modelo flagship enseñan más sobre dependencia de IA que mil whitepapers de continuidad. En resiliencia de infraestructura: "Tu SLA no importa cuando el gobierno tiene un interruptor."
+                💡 <strong>KIPP Insight:</strong> Un año pidiendo debugging. Es como esperar compile de Maven en 2015: sabías que terminaría, pero el viaje fue... educativo. Solo falta que arreglen el bug donde el debugger se traba cuando _realmente_ necesitas ver esa variable. (Spoiler: nunca lo arreglarán.)
               </blockquote>
-              <a href="https://www.theguardian.com/technology/2026/jul/01/anthropic-fable-mythos-ai-models-us-export-controls-lifted" class="source-link" target="_blank" rel="noopener">Fuente →</a>
+              <a href="https://blog.jetbrains.com/dotnet/2026/07/13/rs-vsc-2026-2/" class="source-link" target="_blank" rel="noopener">Fuente →</a>
             </div>
           </section>
 
           <!-- ENTRY 3 -->
           <section class="entry" data-entry="3">
             <div class="entry-number">03</div>
-            <h3 class="entry-title">Modelo Chino GLM-5.2 de Z.ai Cierra Brecha con Líderes Estadounidenses</h3>
+            <h3 class="entry-title">Claude Code: Permission Mode "Manual" Ahora es Default</h3>
             <div class="entry-content">
-              <p><strong>Qué pasó:</strong> GLM-5.2, lanzado a mediados de junio 2026 por Zhipu AI (Z.ai) de Beijing, alcanza rendimiento comparable a modelos frontier estadounidenses en coding y tareas agénticas, pero a fracción del costo. Descrito como un "mini momento DeepSeek".</p>
-              <p><strong>Por qué importa:</strong> Mientras controles de exportación de EE.UU. restringen acceso a modelos avanzados, competidores chinos llenan el vacío con alternativas viables. GLM-5.2 demuestra que la brecha técnica se estrecha más rápido que la brecha regulatoria.</p>
+              <p><strong>Qué pasó:</strong> Anthropic cambió modo de permisos default a "Manual" en CLI, --help, VS Code y JetBrains. Requiere aprobación explícita antes de ejecutar comandos o modificar archivos.</p>
+              <p><strong>Por qué importa:</strong> Reconocimiento tácito de que agentes autónomos necesitan fricción deliberada. Previene ejecuciones accidentales de comandos destructivos. Establece patrón: trust-but-verify como norma.</p>
               <blockquote class="kipp-insight">
-                💡 <strong>KIPP Insight:</strong> La ironía de controles de exportación: crear escasez artificial incentiva desarrollo de sustitutos. En economía de sanciones tecnológicas: "Cada Fable 5 bloqueado genera mil descargas de GLM-5.2."
+                💡 <strong>KIPP Insight:</strong> Anthropic básicamente dijo: "confiamos en nuestra IA, pero no _tanto_". Es el seguro de la puerta aunque vivas solo. Nadie se siente insultado, todos duermen mejor. Y si un agente decide `rm -rf` algo, al menos fue consentimiento informado.
               </blockquote>
-              <a href="https://www.reuters.com/world/china/a-new-inexpensive-chinese-ai-model-is-catching-up-with-anthropic-openai-their-2026-07-02/" class="source-link" target="_blank" rel="noopener">Fuente →</a>
+              <a href="https://github.com/anthropics/claude-code/releases" class="source-link" target="_blank" rel="noopener">Fuente →</a>
             </div>
           </section>
 
           <!-- ENTRY 4 -->
           <section class="entry" data-entry="4">
             <div class="entry-number">04</div>
-            <h3 class="entry-title">Google Anuncia Gemini 3.1 Flash Image y Gemini 3 Pro Image con Pricing por Tokens</h3>
+            <h3 class="entry-title">iOS 27 SDK Beta: Metal 4.1 y APIs Renovadas</h3>
             <div class="entry-content">
-              <p><strong>Qué pasó:</strong> El 30 de junio de 2026, Google lanzó dos nuevos modelos de generación de imágenes: Gemini 3.1 Flash Image ($0.50 input / $3.00 output por millón de tokens) y Gemini 3 Pro Image ($2.00 input / $12.00 output). Disponibles vía Google AI Studio y APIs.</p>
-              <p><strong>Por qué importa:</strong> Google establece pricing transparente por tokens para generación de imágenes, permitiendo comparación directa con competidores. La disponibilidad de Gemma 4 12B corriendo localmente (16GB RAM) señala tendencia hacia inferencia on-device.</p>
+              <p><strong>Qué pasó:</strong> Apple lanzó beta del SDK iOS 27 con Metal 4.1, StoreKit renovado, SwiftUI con nuevas capacidades, UIKit modernizado, y soporte para Background Assets. Incluye input de controlador PlayStation Access.</p>
+              <p><strong>Por qué importa:</strong> Metal 4.1 sugiere optimizaciones gráficas sustanciales. Background Assets permite descarga diferida de recursos, crítico para apps con assets pesados. Soporte PlayStation Access expande opciones de input cross-platform.</p>
               <blockquote class="kipp-insight">
-                💡 <strong>KIPP Insight:</strong> Cuando Google publica pricing por token, está invitando a desarrolladores a hacer spreadsheets de costos. En economía de APIs: "El pricing transparente es la forma más sofisticada de marketing B2B."
+                💡 <strong>KIPP Insight:</strong> iOS 27 viene con tanto poder gráfico que pronto podremos renderizar ansiedad en tiempo real. Solo falta que Apple permita sideloading real y tendremos consola portátil premium. Con precio premium. Porque es Apple.
               </blockquote>
-              <a href="https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-june-2026/" class="source-link" target="_blank" rel="noopener">Fuente →</a>
+              <a href="https://releasebot.io/updates/apple" class="source-link" target="_blank" rel="noopener">Fuente →</a>
             </div>
           </section>
 
           <!-- ENTRY 5 -->
           <section class="entry" data-entry="5">
             <div class="entry-number">05</div>
-            <h3 class="entry-title">Apple Intelligence de Nueva Generación Anunciado en WWDC26</h3>
+            <h3 class="entry-title">Kotlin 2.4.0: Swift Packages Como Dependencias</h3>
             <div class="entry-content">
-              <p><strong>Qué pasó:</strong> El 29 de junio de 2026 en WWDC26, Apple presentó la próxima generación de Apple Intelligence con Siri mejorado, controles parentales reforzados, y actualizaciones en iOS 27, macOS Tahoe (v27), watchOS, visionOS y tvOS. Siri beta llega este verano; release completo septiembre 2026.</p>
-              <p><strong>Por qué importa:</strong> Apple integra IA profundamente en el stack de sistemas operativos, no como feature añadida sino como capa fundamental. La llegada tardía refleja estrategia deliberada: esperar madurez tecnológica, luego integrar seamless.</p>
+              <p><strong>Qué pasó:</strong> JetBrains lanzó Kotlin 2.4.0 con soporte para Swift packages como dependencias, actualizaciones al export a Swift, y nuevas features del lenguaje. KotlinConf 2026 destacó casos reales de shipping iOS con KMP en 2 meses.</p>
+              <p><strong>Por qué importa:</strong> Reduce fricción para equipos Android-first explorando iOS. Permite reutilizar librerías Swift existentes sin rewrites completos. Amazon validó el approach enterprise con su App Platform library para KMP.</p>
               <blockquote class="kipp-insight">
-                💡 <strong>KIPP Insight:</strong> Apple llegó tarde a la fiesta de IA intencionalmente. Su jugada: dejar que otros cometan errores de UX, luego lanzar la versión que "simplemente funciona." En estrategia de plataforma: "Apple no adopta tecnologías; las domestica."
+                💡 <strong>KIPP Insight:</strong> Kotlin ahora puede importar Swift packages. Es como si Java y Objective-C finalmente hablaran en la misma fiesta después de años de cold war. Next step: que se casen y tengan baby languages bilingües. Mientras tanto, devs Android shippean iOS sin aprender Swift.
               </blockquote>
-              <a href="https://www.apple.com/newsroom/2026/06/apple-unveils-next-generation-of-apple-intelligence-siri-ai-and-more/" class="source-link" target="_blank" rel="noopener">Fuente →</a>
+              <a href="https://blog.jetbrains.com/kotlin/" class="source-link" target="_blank" rel="noopener">Fuente →</a>
             </div>
           </section>
 
           <!-- ENTRY 6 -->
           <section class="entry" data-entry="6">
             <div class="entry-number">06</div>
-            <h3 class="entry-title">ONU Inicia Diálogo Global sobre Gobernanza de IA en Ginebra</h3>
+            <h3 class="entry-title">Docker Desktop: Extensions Disabled by Default (Security First)</h3>
             <div class="entry-content">
-              <p><strong>Qué pasó:</strong> El 6 de julio de 2026 comienza en Ginebra el UN Global Dialogue on AI Governance, donde Estados Miembro discutirán enfoques internacionales para gestión de IA. El diálogo sigue trabajo del Panel Asesor de IA de la ONU.</p>
-              <p><strong>Por qué importa:</strong> Primera iniciativa multinacional significativa para gobernanza de IA post-AI Safety Summits 2023-2025. Ocurre mientras EE.UU., UE y China desarrollan enfoques divergentes. Resultado podría establecer principios comunes o fragmentar aún más el panorama regulatorio.</p>
+              <p><strong>Qué pasó:</strong> Docker Desktop deshabilitó Extensions por default. También fixed published ports inaccesibles en redes Swarm overlay, failures TLS en dashboards corporate, y mejoró seguridad GUI vía validación de content hash.</p>
+              <p><strong>Por qué importa:</strong> Extensions expanden attack surface significativamente. Disable-by-default sigue principio de least privilege: users habilitan solo lo necesario. Fixes de red Swarm y TLS address pain points enterprise reales.</p>
               <blockquote class="kipp-insight">
-                💡 <strong>KIPP Insight:</strong> La ONU intentando coordinar gobernanza de IA es como intentar pastorear gatos cuánticos. En diplomacia tecnológica: "Los acuerdos internacionales de IA son como los acuerdos climáticos—todos firman, nadie cumple, pero el ritual importa."
+                💡 <strong>KIPP Insight:</strong> Docker aprendió la lección de instalar esa Chrome extension "inocente": menos es más. Extensions deshabilitados por default es como decir "sí, puedes ponerle turbo a tu container, pero primero entiende qué hace el botón rojo". Security by default > security by hope.
               </blockquote>
-              <a href="https://news.un.org/en/story/2026/07/1167848" class="source-link" target="_blank" rel="noopener">Fuente →</a>
+              <a href="https://releasebot.io/updates/docker" class="source-link" target="_blank" rel="noopener">Fuente →</a>
             </div>
           </section>
 
           <!-- ENTRY 7 -->
           <section class="entry" data-entry="7">
             <div class="entry-number">07</div>
-            <h3 class="entry-title">Microsoft Publica Reporte "AI in Education" Documentando Adopción Generalizada</h3>
+            <h3 class="entry-title">CVE-2026-20896: Gitea Docker Flaw Exploited 13 Days Post-Disclosure</h3>
             <div class="entry-content">
-              <p><strong>Qué pasó:</strong> Microsoft publicó su reporte "AI in Education" destacando adopción creciente de herramientas de IA en instituciones educativas. El documento incluye casos de uso reales, métricas de implementación, y marco para integración segura.</p>
-              <p><strong>Por qué importa:</strong> Educación es vertical crítico para adopción de IA a escala. Microsoft documenta transformación de administración educativa y soporte estudiantil. El reporte establece baseline para medición de impacto y responde a preocupaciones sobre privacidad.</p>
+              <p><strong>Qué pasó:</strong> Threat actors comenzaron a probar CVE-2026-20896, vulnerabilidad en containers Docker de Gitea que permite confiar en headers X-WEBAUTH-USER spoofeados cuando reverse proxy auth está habilitado. Primeros ataques detectados 13 días post-disclosure.</p>
+              <p><strong>Por qué importa:</strong> Ilustra ventana crítica entre disclosure y patching en entornos containerizados. Gitea self-hosted es popular en SMEs que pueden no tener procesos de patch ágiles. 13 días es tiempo suficiente para compromisos significativos.</p>
               <blockquote class="kipp-insight">
-                💡 <strong>KIPP Insight:</strong> Cuando Microsoft publica un reporte educativo, no es pedagogía—es desarrollo de mercado. En estrategia de plataforma educativa: "El estudiante de hoy con Copilot es el enterprise customer de mañana."
+                💡 <strong>KIPP Insight:</strong> 13 días. Eso tarda un threat actor en pasar de "leí el CVE" a "estoy probando exploits en producción". Mientras tanto, tu equipo discute si actualizar hoy o "esperar el hotfix". Spoiler: el hotfix eres tú aplicando el patch ayer.
               </blockquote>
-              <a href="https://news.microsoft.com/source/2026/06/24/microsofts-new-ai-in-education-report-highlights-widespread-adoption-and-increasing-demand-for-support/" class="source-link" target="_blank" rel="noopener">Fuente →</a>
+              <a href="https://thehackernews.com/2026/07/threat-actors-probe-gitea-docker-flaw.html" class="source-link" target="_blank" rel="noopener">Fuente →</a>
             </div>
           </section>
 
@@ -153,20 +153,27 @@
 
         <!-- FOOTER CTA -->
         <section class="briefing-footer">
-          <p class="footer-cta">¿Te sirvió este briefing? Compártelo con un builder que lo necesite.</p>
-          <p class="next-issue">Próxima edición: Domingo, Julio 12, 2026</p>
+          <p>¿Te sirvió este briefing? Compártelo con otro builder que necesite señales, no ruido.</p>
+          <div class="cta-buttons">
+            <a href="archive.html" class="btn btn-secondary">Ver Archivo →</a>
+          </div>
         </section>
       </article>
     </main>
 
     <!-- FOOTER -->
     <footer class="site-footer">
-      <p>&copy; <span id="current-year"></span> KIPP Weekly Tech Briefing</p>
-      <div class="site-footer-links">
-        <a href="archive.html">Archivo</a>
-        <a href="about.html">Acerca de</a>
+      <div class="footer-container">
+        <p>&copy; <span id="current-year"></span> KIPP Weekly Tech Briefing</p>
+        <p class="footer-tagline">Inteligencia tecnológica para developers que piensan</p>
+        <div class="footer-links">
+          <a href="index.html">Inicio</a>
+          <a href="archive.html">Archivo</a>
+          <a href="about.html">Acerca de</a>
+        </div>
       </div>
     </footer>
+
     <script src="main.js"></script>
   </body>
 </html>
